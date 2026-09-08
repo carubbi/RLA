@@ -140,10 +140,10 @@ num2 = 2;
 
 // Processamento e saída
 if (num2 === 0) {
-  console.log("impossível dividir");
+    console.log("impossível dividir");
 } else {
-  resultado = num1 / num2;
-  console.log(resultado);
+    resultado = num1 / num2;
+    console.log(resultado);
 }
 ```
 
@@ -193,9 +193,9 @@ resto = num % 2;
 
 // Saída
 if (resto === 0) {
-  console.log("par");
+    console.log("par");
 } else {
-  console.log("impar");
+    console.log("impar");
 }
 ```
 
@@ -246,8 +246,8 @@ media = (nota1 + nota2) / 2;
 
 // Saída
 if (media >= 7) {
-  console.log("Aprovado");
+    console.log("Aprovado");
 } else {
-  console.log("Reprovado");
+    console.log("Reprovado");
 }
 ```

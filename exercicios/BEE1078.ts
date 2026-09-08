@@ -12,6 +12,6 @@ numero = parseInt(entradaNumero);
 
 // Saída de dados
 for (i = 1; i <= 10; i++) {
-  console.log(`${i} x ${numero} = ${i * numero}`);
+    console.log(`${i} x ${numero} = ${i * numero}`);
 }
 }

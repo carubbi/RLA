@@ -44,9 +44,9 @@ console.log('resto (%):', resto);
 console.log('\n=== 5) Validacao simples antes de calcular ===');
 divisor = 0;
 if (divisor === 0) {
-  console.log('Validacao: impossivel dividir por zero.');
+    console.log('Validacao: impossivel dividir por zero.');
 } else {
-  console.log('Resultado da divisao:', numero1 / divisor);
+    console.log('Resultado da divisao:', numero1 / divisor);
 }
 
 console.log('\n=== 6) Teste de mesa (simulacao manual) ===');

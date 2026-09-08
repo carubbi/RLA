@@ -43,12 +43,12 @@ let i: number;
 valores = [];
 
 for (i = 0; i < 3; i++) {
-  valores[i] = i + 1;
+    valores[i] = i + 1;
 }
 
 // Saida
 for (i = 0; i < valores.length; i++) {
-  console.log(valores[i]);
+    console.log(valores[i]);
 }
 ```
 
@@ -92,7 +92,7 @@ notas[1] = 8.0;
 
 // Saida
 for (i = 0; i < notas.length; i++) {
-  console.log(notas[i]);
+    console.log(notas[i]);
 }
 ```
 
@@ -122,7 +122,7 @@ O padrão mais comum para percorrer todas as posições é:
 
 ```typescript
 for (i = 0; i < notas.length; i++) {
-  console.log(notas[i]);
+    console.log(notas[i]);
 }
 ```
 
@@ -144,18 +144,18 @@ entrada = "";
 
 // Entrada e preenchimento
 for (i = 0; i < 5 && entrada !== null; i++) {
-  entrada = prompt("Digite uma nota:");
+    entrada = prompt("Digite uma nota:");
 
-  if (entrada !== null) {
-    notas[i] = parseFloat(entrada);
-  }
+    if (entrada !== null) {
+        notas[i] = parseFloat(entrada);
+    }
 }
 
 // Saida
 if (entrada !== null) {
-  for (i = 0; i < notas.length; i++) {
-    console.log(notas[i]);
-  }
+    for (i = 0; i < notas.length; i++) {
+        console.log(notas[i]);
+    }
 }
 ```
 
@@ -174,17 +174,17 @@ entrada = prompt("Digite as notas separadas por espaco:");
 
 // Processamento
 if (entrada !== null) {
-  partes = entrada.split(" ");
-  numeros = [];
+    partes = entrada.split(" ");
+    numeros = [];
 
-  for (i = 0; i < partes.length; i++) {
-    numeros[i] = parseFloat(partes[i]);
-  }
+    for (i = 0; i < partes.length; i++) {
+        numeros[i] = parseFloat(partes[i]);
+    }
 
-  // Saida
-  for (i = 0; i < numeros.length; i++) {
-    console.log(numeros[i]);
-  }
+    // Saida
+    for (i = 0; i < numeros.length; i++) {
+        console.log(numeros[i]);
+    }
 }
 ```
 
@@ -208,23 +208,23 @@ entrada = prompt("Digite as notas separadas por quebra de linha:");
 
 // Processamento
 if (entrada !== null) {
-  partes = entrada.split("\n");
-  notas = [];
-  soma = 0;
+    partes = entrada.split("\n");
+    notas = [];
+    soma = 0;
 
-  for (i = 0; i < partes.length; i++) {
-    notas[i] = parseFloat(partes[i]);
-  }
+    for (i = 0; i < partes.length; i++) {
+        notas[i] = parseFloat(partes[i]);
+    }
 
-  for (i = 0; i < notas.length; i++) {
-    soma = soma + notas[i];
-  }
+    for (i = 0; i < notas.length; i++) {
+        soma = soma + notas[i];
+    }
 
-  media = soma / notas.length;
+    media = soma / notas.length;
 
-  // Saida
-  console.log("Soma: " + soma);
-  console.log("Media: " + media);
+    // Saida
+    console.log("Soma: " + soma);
+    console.log("Media: " + media);
 }
 ```
 
@@ -245,10 +245,10 @@ maior = valores[0];
 posicao = 0;
 
 for (i = 1; i < valores.length; i++) {
-  if (valores[i] > maior) {
-    maior = valores[i];
-    posicao = i;
-  }
+    if (valores[i] > maior) {
+        maior = valores[i];
+        posicao = i;
+    }
 }
 
 // Saida
@@ -276,16 +276,16 @@ procurado = 7;
 encontrado = false;
 
 for (i = 0; i < valores.length; i++) {
-  if (valores[i] === procurado) {
-    encontrado = true;
-  }
+    if (valores[i] === procurado) {
+        encontrado = true;
+    }
 }
 
 // Saida
 if (encontrado) {
-  console.log("Valor encontrado");
+    console.log("Valor encontrado");
 } else {
-  console.log("Valor nao encontrado");
+    console.log("Valor nao encontrado");
 }
 ```
 
@@ -306,17 +306,17 @@ let i: number;
 entrada = prompt("Digite o valor:");
 
 if (entrada !== null) {
-  valor = parseInt(entrada);
-  cedulas = [100, 50, 20, 10, 5, 2, 1];
+    valor = parseInt(entrada);
+    cedulas = [100, 50, 20, 10, 5, 2, 1];
 
-  console.log(valor);
+    console.log(valor);
 
-  for (i = 0; i < cedulas.length; i++) {
-    quantidade = parseInt(String(valor / cedulas[i]));
-    valor = valor % cedulas[i];
+    for (i = 0; i < cedulas.length; i++) {
+        quantidade = parseInt(String(valor / cedulas[i]));
+        valor = valor % cedulas[i];
 
-    console.log(quantidade + " nota(s) de R$ " + cedulas[i] + ",00");
-  }
+        console.log(quantidade + " nota(s) de R$ " + cedulas[i] + ",00");
+    }
 }
 ```
 

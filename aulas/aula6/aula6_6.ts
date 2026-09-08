@@ -10,19 +10,19 @@ entradaIdade = prompt("Digite a idade do candidato:"); // 18
 
 // Processamento
 if (entradaIdade !== null) {
-  idade = parseInt(entradaIdade);
+    idade = parseInt(entradaIdade);
 
-  if (idade < 0) {
-    mensagem = "A idade deve ser maior ou igual a zero!";
-  } else {
-    if (idade >= 18) {
-      mensagem = "O candidato esta apto a tirar a CNH!";
+    if (idade < 0) {
+        mensagem = "A idade deve ser maior ou igual a zero!";
     } else {
-      anosApto = 18 - idade;
-      mensagem = `Faltam ${anosApto} ano(s) para o candidato estar apto!`;
+        if (idade >= 18) {
+            mensagem = "O candidato esta apto a tirar a CNH!";
+        } else {
+            anosApto = 18 - idade;
+            mensagem = `Faltam ${anosApto} ano(s) para o candidato estar apto!`;
+        }
     }
-  }
 
-  // Saida
-  console.log(mensagem);
+    // Saida
+    console.log(mensagem);
 }

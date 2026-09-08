@@ -28,12 +28,12 @@ entrada = prompt("Digite os valores separados por espaco:");
 
 // Processamento
 if (entrada !== null) {
-  dados = entrada.split(" ");
-  vetor = [];
+    dados = entrada.split(" ");
+    vetor = [];
 
-  for (i = 0; i < dados.length; i++) {
-    vetor[i] = parseInt(dados[i]);
-  }
+    for (i = 0; i < dados.length; i++) {
+        vetor[i] = parseInt(dados[i]);
+    }
 }
 ```
 
@@ -42,15 +42,15 @@ Para trocar dois elementos, usamos seus índices.
 
 ```typescript
 function trocarValores(
-  vetor: number[],
-  indice1: number,
-  indice2: number
+    vetor: number[],
+    indice1: number,
+    indice2: number
 ): void {
-  let temporaria: number;
+    let temporaria: number;
 
-  temporaria = vetor[indice1];
-  vetor[indice1] = vetor[indice2];
-  vetor[indice2] = temporaria;
+    temporaria = vetor[indice1];
+    vetor[indice1] = vetor[indice2];
+    vetor[indice2] = temporaria;
 }
 ```
 
@@ -67,19 +67,19 @@ Há duas abordagens:
 
 ```typescript
 function criarVetorInvertido(vetor: number[]): number[] {
-  let invertido: number[];
-  let i: number;
-  let j: number;
+    let invertido: number[];
+    let i: number;
+    let j: number;
 
-  invertido = [];
-  j = vetor.length - 1;
+    invertido = [];
+    j = vetor.length - 1;
 
-  for (i = 0; i < vetor.length; i++) {
-    invertido[j] = vetor[i];
-    j--;
-  }
+    for (i = 0; i < vetor.length; i++) {
+        invertido[j] = vetor[i];
+        j--;
+    }
 
-  return invertido;
+    return invertido;
 }
 ```
 
@@ -87,19 +87,19 @@ function criarVetorInvertido(vetor: number[]): number[] {
 
 ```typescript
 function inverterNoMesmoVetor(vetor: number[]): void {
-  let quantidade: number;
-  let meio: number;
-  let i: number;
-  let temporaria: number;
+    let quantidade: number;
+    let meio: number;
+    let i: number;
+    let temporaria: number;
 
-  quantidade = vetor.length;
-  meio = parseInt(String(quantidade / 2));
+    quantidade = vetor.length;
+    meio = parseInt(String(quantidade / 2));
 
-  for (i = 0; i < meio; i++) {
-    temporaria = vetor[i];
-    vetor[i] = vetor[quantidade - 1 - i];
-    vetor[quantidade - 1 - i] = temporaria;
-  }
+    for (i = 0; i < meio; i++) {
+        temporaria = vetor[i];
+        vetor[i] = vetor[quantidade - 1 - i];
+        vetor[quantidade - 1 - i] = temporaria;
+    }
 }
 ```
 
@@ -112,15 +112,15 @@ o vetor não está ordenado.
 
 ```typescript
 function buscaLinear(valores: number[], procurado: number): number {
-  let i: number;
+    let i: number;
 
-  for (i = 0; i < valores.length; i++) {
-    if (valores[i] === procurado) {
-      return i;
+    for (i = 0; i < valores.length; i++) {
+        if (valores[i] === procurado) {
+            return i;
+        }
     }
-  }
 
-  return -1;
+    return -1;
 }
 ```
 
@@ -138,26 +138,26 @@ vetor previamente ordenado.
 
 ```typescript
 function buscaBinaria(valores: number[], procurado: number): number {
-  let inicio: number;
-  let fim: number;
-  let meio: number;
+    let inicio: number;
+    let fim: number;
+    let meio: number;
 
-  inicio = 0;
-  fim = valores.length - 1;
+    inicio = 0;
+    fim = valores.length - 1;
 
-  while (inicio <= fim) {
-    meio = parseInt(String((inicio + fim) / 2));
+    while (inicio <= fim) {
+        meio = parseInt(String((inicio + fim) / 2));
 
-    if (procurado === valores[meio]) {
-      return meio;
-    } else if (procurado > valores[meio]) {
-      inicio = meio + 1;
-    } else {
-      fim = meio - 1;
+        if (procurado === valores[meio]) {
+            return meio;
+        } else if (procurado > valores[meio]) {
+            inicio = meio + 1;
+        } else {
+            fim = meio - 1;
+        }
     }
-  }
 
-  return -1;
+    return -1;
 }
 ```
 
@@ -193,27 +193,27 @@ Ao final de cada passagem, um dos maiores valores chega à sua posição final.
 
 ```typescript
 function bubbleSort(vetor: number[]): void {
-  let i: number;
-  let j: number;
-  let houveTroca: boolean;
-  let temporaria: number;
+    let i: number;
+    let j: number;
+    let houveTroca: boolean;
+    let temporaria: number;
 
-  for (i = 0; i < vetor.length - 1; i++) {
-    houveTroca = false;
+    for (i = 0; i < vetor.length - 1; i++) {
+        houveTroca = false;
 
-    for (j = 0; j < vetor.length - 1 - i; j++) {
-      if (vetor[j] > vetor[j + 1]) {
-        temporaria = vetor[j];
-        vetor[j] = vetor[j + 1];
-        vetor[j + 1] = temporaria;
-        houveTroca = true;
-      }
+        for (j = 0; j < vetor.length - 1 - i; j++) {
+            if (vetor[j] > vetor[j + 1]) {
+                temporaria = vetor[j];
+                vetor[j] = vetor[j + 1];
+                vetor[j + 1] = temporaria;
+                houveTroca = true;
+            }
+        }
+
+        if (!houveTroca) {
+            break;
+        }
     }
-
-    if (!houveTroca) {
-      break;
-    }
-  }
 }
 ```
 
@@ -268,8 +268,8 @@ vetor = [12, 45, 7, 89, 23];
 vetorOrdenado = [];
 
 for (i = 0; i < vetor.length; i++) {
-  valor = vetor[i];
-  vetorOrdenado[i] = valor;
+    valor = vetor[i];
+    vetorOrdenado[i] = valor;
 }
 
 bubbleSort(vetorOrdenado);

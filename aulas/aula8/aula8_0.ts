@@ -1,156 +1,156 @@
 // Aula 8 - Funcoes e algoritmos classicos
 
 function somar(a: number, b: number): number {
-  return a + b;
+    return a + b;
 }
 
 function mostrarMensagem(nome: string): void {
-  let saudacao: string;
+    let saudacao: string;
 
-  saudacao = "Ola, " + nome;
-  console.log(saudacao);
+    saudacao = "Ola, " + nome;
+    console.log(saudacao);
 }
 
 function calcularDobro(numero: number): number {
-  return numero * 2;
+    return numero * 2;
 }
 
 function calcularContagem(n: number): number {
-  let contador: number;
-  let i: number;
+    let contador: number;
+    let i: number;
 
-  contador = 0;
+    contador = 0;
 
-  for (i = 1; i <= n; i++) {
-    contador++;
-  }
+    for (i = 1; i <= n; i++) {
+        contador++;
+    }
 
-  return contador;
+    return contador;
 }
 
 function calcularSoma(n: number): number {
-  let soma: number;
-  let i: number;
+    let soma: number;
+    let i: number;
 
-  soma = 0;
+    soma = 0;
 
-  for (i = 1; i <= n; i++) {
-    soma = soma + i;
-  }
+    for (i = 1; i <= n; i++) {
+        soma = soma + i;
+    }
 
-  return soma;
+    return soma;
 }
 
 function calcularProduto(n: number): number {
-  let produto: number;
-  let i: number;
+    let produto: number;
+    let i: number;
 
-  produto = 1;
+    produto = 1;
 
-  for (i = 1; i <= n; i++) {
-    produto = produto * i;
-  }
+    for (i = 1; i <= n; i++) {
+        produto = produto * i;
+    }
 
-  return produto;
+    return produto;
 }
 
 function calcularFatorial(n: number): number {
-  let fatorial: number;
-  let i: number;
+    let fatorial: number;
+    let i: number;
 
-  fatorial = 1;
+    fatorial = 1;
 
-  for (i = 1; i <= n; i++) {
-    fatorial = fatorial * i;
-  }
+    for (i = 1; i <= n; i++) {
+        fatorial = fatorial * i;
+    }
 
-  return fatorial;
+    return fatorial;
 }
 
 function gerarFibonacci(quantidade: number): string {
-  let a: number;
-  let b: number;
-  let proximo: number;
-  let i: number;
-  let sequencia: string;
+    let a: number;
+    let b: number;
+    let proximo: number;
+    let i: number;
+    let sequencia: string;
 
-  a = 0;
-  b = 1;
-  sequencia = "";
+    a = 0;
+    b = 1;
+    sequencia = "";
 
-  for (i = 1; i <= quantidade; i++) {
-    sequencia += a;
+    for (i = 1; i <= quantidade; i++) {
+        sequencia += a;
 
-    if (i < quantidade) {
-      sequencia += ", ";
+        if (i < quantidade) {
+            sequencia += ", ";
+        }
+
+        proximo = a + b;
+        a = b;
+        b = proximo;
     }
 
-    proximo = a + b;
-    a = b;
-    b = proximo;
-  }
-
-  return sequencia;
+    return sequencia;
 }
 
 function decimalParaBinario(numero: number): string {
-  let binario: string;
-  let resto: number;
+    let binario: string;
+    let resto: number;
 
-  if (numero === 0) {
-    return "0";
-  }
+    if (numero === 0) {
+        return "0";
+    }
 
-  binario = "";
+    binario = "";
 
-  while (numero > 0) {
-    resto = numero % 2;
-    binario = resto + binario;
-    numero = Math.trunc(numero / 2);
-  }
+    while (numero > 0) {
+        resto = numero % 2;
+        binario = resto + binario;
+        numero = Math.trunc(numero / 2);
+    }
 
-  return binario;
+    return binario;
 }
 
 function ehPrimo(numero: number): boolean {
-  let divisor: number;
+    let divisor: number;
 
-  if (numero < 2) {
-    return false;
-  }
-
-  for (divisor = 2; divisor < numero; divisor++) {
-    if (numero % divisor === 0) {
-      return false;
+    if (numero < 2) {
+        return false;
     }
-  }
 
-  return true;
+    for (divisor = 2; divisor < numero; divisor++) {
+        if (numero % divisor === 0) {
+            return false;
+        }
+    }
+
+    return true;
 }
 
 function gerarNPrimeirosPrimos(quantidade: number): string {
-  let encontrados: number;
-  let candidato: number;
-  let resposta: string;
+    let encontrados: number;
+    let candidato: number;
+    let resposta: string;
 
-  encontrados = 0;
-  candidato = 2;
-  resposta = "";
+    encontrados = 0;
+    candidato = 2;
+    resposta = "";
 
-  while (encontrados < quantidade) {
-    if (ehPrimo(candidato)) {
-      if (encontrados > 0) {
-        resposta += ", ";
-      }
+    while (encontrados < quantidade) {
+        if (ehPrimo(candidato)) {
+            if (encontrados > 0) {
+                resposta += ", ";
+            }
 
-      resposta += candidato;
-      encontrados++;
+            resposta += candidato;
+            encontrados++;
+        }
+
+        candidato++;
     }
 
-    candidato++;
-  }
-
-  return resposta;
+    return resposta;
 }
 
 // Declaracao de variaveis

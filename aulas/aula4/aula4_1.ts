@@ -11,7 +11,7 @@ valorCompra = parseFloat(entrada);
 
 // Regra: aplica desconto apenas acima de 100
 if (valorCompra > 100) {
-  valorCompra = valorCompra * 0.9; // desconto de 10%
+    valorCompra = valorCompra * 0.9; // desconto de 10%
 }
 
 // Saida final

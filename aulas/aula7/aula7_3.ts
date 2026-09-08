@@ -10,13 +10,13 @@ senha = prompt("Digite a senha:"); // 1111
 mensagem = "";
 
 while (senha !== "1234" && senha !== null) {
-  mensagem += "Senha incorreta\n";
-  senha = prompt("Digite a senha:"); // 9999, 1234
+    mensagem += "Senha incorreta\n";
+    senha = prompt("Digite a senha:"); // 9999, 1234
 }
 
 if (senha !== null) {
-  mensagem += "Acesso liberado";
+    mensagem += "Acesso liberado";
 
-  // Saida
-  console.log(mensagem);
+    // Saida
+    console.log(mensagem);
 }

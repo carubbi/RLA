@@ -10,16 +10,16 @@ let i: number;
 entrada = prompt("Digite o valor:"); // 576
 
 if (entrada !== null) {
-  valor = parseInt(entrada);
-  cedulas = [100, 50, 20, 10, 5, 2, 1];
+    valor = parseInt(entrada);
+    cedulas = [100, 50, 20, 10, 5, 2, 1];
 
-  // Saida exigida pelo problema: valor original
-  console.log(valor);
+    // Saida exigida pelo problema: valor original
+    console.log(valor);
 
-  for (i = 0; i < cedulas.length; i++) {
-    quantidade = parseInt(String(valor / cedulas[i]));
-    valor = valor % cedulas[i];
+    for (i = 0; i < cedulas.length; i++) {
+        quantidade = parseInt(String(valor / cedulas[i]));
+        valor = valor % cedulas[i];
 
-    console.log(quantidade + " nota(s) de R$ " + cedulas[i] + ",00");
-  }
+        console.log(quantidade + " nota(s) de R$ " + cedulas[i] + ",00");
+    }
 }

@@ -26,8 +26,8 @@ Uma matriz usa dois índices:
 let matriz: number[][];
 
 matriz = [
-  [1, 2, 3],
-  [4, 5, 6]
+    [1, 2, 3],
+    [4, 5, 6]
 ];
 
 console.log(matriz[1][2]);
@@ -62,15 +62,15 @@ let i: number;
 let j: number;
 
 matriz = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9]
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
 ];
 
 for (i = 0; i < matriz.length; i++) {
-  for (j = 0; j < matriz[i].length; j++) {
-    console.log("Linha " + i + ", coluna " + j + ": " + matriz[i][j]);
-  }
+    for (j = 0; j < matriz[i].length; j++) {
+        console.log("Linha " + i + ", coluna " + j + ": " + matriz[i][j]);
+    }
 }
 ```
 
@@ -86,11 +86,11 @@ let j: number;
 matriz = [];
 
 for (i = 0; i < 3; i++) {
-  matriz[i] = [];
+    matriz[i] = [];
 
-  for (j = 0; j < 3; j++) {
-    matriz[i][j] = i * 10 + j;
-  }
+    for (j = 0; j < 3; j++) {
+        matriz[i][j] = i * 10 + j;
+    }
 }
 ```
 
@@ -115,17 +115,17 @@ indice = 0;
 entrada = prompt("Digite os valores separados por espaco:");
 
 if (entrada !== null) {
-  dados = entrada.split(" ");
-  nColunas = parseInt(String(dados.length / nLinhas));
+    dados = entrada.split(" ");
+    nColunas = parseInt(String(dados.length / nLinhas));
 
-  for (i = 0; i < nLinhas; i++) {
-    matriz[i] = [];
+    for (i = 0; i < nLinhas; i++) {
+        matriz[i] = [];
 
-    for (j = 0; j < nColunas; j++) {
-      matriz[i][j] = parseInt(dados[indice]);
-      indice++;
+        for (j = 0; j < nColunas; j++) {
+            matriz[i][j] = parseInt(dados[indice]);
+            indice++;
+        }
     }
-  }
 }
 ```
 
@@ -135,28 +135,28 @@ A quantidade total de valores precisa ser compatível com o número de linhas.
 
 ```typescript
 function gerarMatriz(entrada: string, nLinhas: number): number[][] {
-  let dados: string[];
-  let matriz: number[][];
-  let nColunas: number;
-  let indice: number;
-  let i: number;
-  let j: number;
+    let dados: string[];
+    let matriz: number[][];
+    let nColunas: number;
+    let indice: number;
+    let i: number;
+    let j: number;
 
-  dados = entrada.split(" ");
-  nColunas = parseInt(String(dados.length / nLinhas));
-  matriz = [];
-  indice = 0;
+    dados = entrada.split(" ");
+    nColunas = parseInt(String(dados.length / nLinhas));
+    matriz = [];
+    indice = 0;
 
-  for (i = 0; i < nLinhas; i++) {
-    matriz[i] = [];
+    for (i = 0; i < nLinhas; i++) {
+        matriz[i] = [];
 
-    for (j = 0; j < nColunas; j++) {
-      matriz[i][j] = parseInt(dados[indice]);
-      indice++;
+        for (j = 0; j < nColunas; j++) {
+            matriz[i][j] = parseInt(dados[indice]);
+            indice++;
+        }
     }
-  }
 
-  return matriz;
+    return matriz;
 }
 ```
 
@@ -175,17 +175,17 @@ let i: number;
 let j: number;
 
 matriz = [
-  [8, 7, 9],
-  [6, 10, 5]
+    [8, 7, 9],
+    [6, 10, 5]
 ];
 quantidade = 0;
 soma = 0;
 
 for (i = 0; i < matriz.length; i++) {
-  for (j = 0; j < matriz[i].length; j++) {
-    soma = soma + matriz[i][j];
-    quantidade++;
-  }
+    for (j = 0; j < matriz[i].length; j++) {
+        soma = soma + matriz[i][j];
+        quantidade++;
+    }
 }
 
 media = soma / quantidade;
@@ -206,22 +206,22 @@ let i: number;
 let j: number;
 
 matriz = [
-  [12, 45, 7],
-  [89, 23, 14],
-  [5, 91, 30]
+    [12, 45, 7],
+    [89, 23, 14],
+    [5, 91, 30]
 ];
 maior = matriz[0][0];
 linhaMaior = 0;
 colunaMaior = 0;
 
 for (i = 0; i < matriz.length; i++) {
-  for (j = 0; j < matriz[i].length; j++) {
-    if (matriz[i][j] > maior) {
-      maior = matriz[i][j];
-      linhaMaior = i;
-      colunaMaior = j;
+    for (j = 0; j < matriz[i].length; j++) {
+        if (matriz[i][j] > maior) {
+            maior = matriz[i][j];
+            linhaMaior = i;
+            colunaMaior = j;
+        }
     }
-  }
 }
 ```
 
@@ -239,9 +239,9 @@ let i: number;
 let j: number;
 
 matriz = [
-  [12, 45, 7],
-  [89, 23, 14],
-  [5, 91, 30]
+    [12, 45, 7],
+    [89, 23, 14],
+    [5, 91, 30]
 ];
 procurado = 23;
 encontrado = false;
@@ -249,13 +249,13 @@ linhaEncontrada = -1;
 colunaEncontrada = -1;
 
 for (i = 0; i < matriz.length; i++) {
-  for (j = 0; j < matriz[i].length; j++) {
-    if (matriz[i][j] === procurado) {
-      encontrado = true;
-      linhaEncontrada = i;
-      colunaEncontrada = j;
+    for (j = 0; j < matriz[i].length; j++) {
+        if (matriz[i][j] === procurado) {
+            encontrado = true;
+            linhaEncontrada = i;
+            colunaEncontrada = j;
+        }
     }
-  }
 }
 ```
 
@@ -265,13 +265,13 @@ fixamos `j` e variamos `i`.
 
 ```typescript
 for (j = 0; j < matriz[0].length; j++) {
-  somaColuna = 0;
+    somaColuna = 0;
 
-  for (i = 0; i < matriz.length; i++) {
-    somaColuna = somaColuna + matriz[i][j];
-  }
+    for (i = 0; i < matriz.length; i++) {
+        somaColuna = somaColuna + matriz[i][j];
+    }
 
-  console.log("Soma da coluna " + j + ": " + somaColuna);
+    console.log("Soma da coluna " + j + ": " + somaColuna);
 }
 ```
 
@@ -289,21 +289,21 @@ Na transposta, linhas tornam-se colunas.
 
 ```typescript
 function calcularTransposta(matriz: number[][]): number[][] {
-  let transposta: number[][];
-  let i: number;
-  let j: number;
+    let transposta: number[][];
+    let i: number;
+    let j: number;
 
-  transposta = [];
+    transposta = [];
 
-  for (j = 0; j < matriz[0].length; j++) {
-    transposta[j] = [];
+    for (j = 0; j < matriz[0].length; j++) {
+        transposta[j] = [];
 
-    for (i = 0; i < matriz.length; i++) {
-      transposta[j][i] = matriz[i][j];
+        for (i = 0; i < matriz.length; i++) {
+            transposta[j][i] = matriz[i][j];
+        }
     }
-  }
 
-  return transposta;
+    return transposta;
 }
 ```
 
@@ -315,29 +315,29 @@ quantidade de linhas de `b`.
 
 ```typescript
 function multiplicarMatrizes(a: number[][], b: number[][]): number[][] {
-  let resultado: number[][];
-  let i: number;
-  let j: number;
-  let k: number;
-  let soma: number;
+    let resultado: number[][];
+    let i: number;
+    let j: number;
+    let k: number;
+    let soma: number;
 
-  resultado = [];
+    resultado = [];
 
-  for (i = 0; i < a.length; i++) {
-    resultado[i] = [];
+    for (i = 0; i < a.length; i++) {
+        resultado[i] = [];
 
-    for (j = 0; j < b[0].length; j++) {
-      soma = 0;
+        for (j = 0; j < b[0].length; j++) {
+            soma = 0;
 
-      for (k = 0; k < a[i].length; k++) {
-        soma = soma + a[i][k] * b[k][j];
-      }
+            for (k = 0; k < a[i].length; k++) {
+                soma = soma + a[i][k] * b[k][j];
+            }
 
-      resultado[i][j] = soma;
+            resultado[i][j] = soma;
+        }
     }
-  }
 
-  return resultado;
+    return resultado;
 }
 ```
 

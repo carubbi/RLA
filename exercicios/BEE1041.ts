@@ -16,19 +16,19 @@ y = parseFloat(entradaY);
 
 // Verificar a posição do ponto (x, y) e atribuir a mensagem correspondente
 if (x === 0 && y === 0) {
-  mensagem = 'Origem';
+    mensagem = 'Origem';
 } else if (x === 0) {
-  mensagem = 'Eixo Y';
+    mensagem = 'Eixo Y';
 } else if (y === 0) {
-  mensagem = 'Eixo X';
+    mensagem = 'Eixo X';
 } else if (x > 0 && y > 0) {
-  mensagem = 'Q1';
+    mensagem = 'Q1';
 } else if (x < 0 && y > 0) {
-  mensagem = 'Q2';
+    mensagem = 'Q2';
 } else if (x < 0 && y < 0) {
-  mensagem = 'Q3';
+    mensagem = 'Q3';
 } else {
-  mensagem = 'Q4';
+    mensagem = 'Q4';
 }
 
 // Saída de dados

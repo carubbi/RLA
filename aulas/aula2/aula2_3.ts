@@ -10,8 +10,8 @@ num2 = 2;
 
 // Processamento e saida
 if (num2 === 0) {
-  console.log("impossível dividir");
+    console.log("impossível dividir");
 } else {
-  resultado = num1 / num2;
-  console.log(resultado);
+    resultado = num1 / num2;
+    console.log(resultado);
 }

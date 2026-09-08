@@ -9,20 +9,20 @@ entradaNumero = prompt("Digite um numero (0 para encerrar):"); // 5
 
 // Processamento
 if (entradaNumero !== null) {
-  num = parseInt(entradaNumero);
-  soma = 0;
+    num = parseInt(entradaNumero);
+    soma = 0;
 
-  while (num !== 0 && entradaNumero !== null) {
-    soma += num;
-    entradaNumero = prompt("Digite um numero (0 para encerrar):"); // 3, 2, 0
+    while (num !== 0 && entradaNumero !== null) {
+        soma += num;
+        entradaNumero = prompt("Digite um numero (0 para encerrar):"); // 3, 2, 0
 
-    if (entradaNumero !== null) {
-      num = parseInt(entradaNumero);
+        if (entradaNumero !== null) {
+            num = parseInt(entradaNumero);
+        }
     }
-  }
 
-  // Saida
-  if (entradaNumero !== null) {
-    console.log(soma);
-  }
+    // Saida
+    if (entradaNumero !== null) {
+        console.log(soma);
+    }
 }

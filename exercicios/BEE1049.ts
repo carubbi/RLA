@@ -12,33 +12,33 @@ alimentacao = prompt('Digite o tipo de alimentacao: ');
 // Processamento dos dados
 if (vertebrado !== null && classe !== null && alimentacao !== null) {
 if (vertebrado === 'vertebrado') {
-  if (classe === 'ave') {
-    if (alimentacao === 'carnivoro') {
-      animal = 'aguia';
+    if (classe === 'ave') {
+        if (alimentacao === 'carnivoro') {
+            animal = 'aguia';
+        } else {
+            animal = 'pomba';
+        }
     } else {
-      animal = 'pomba';
+        if (alimentacao === 'onivoro') {
+            animal = 'homem';
+        } else {
+            animal = 'vaca';
+        }
     }
-  } else {
-    if (alimentacao === 'onivoro') {
-      animal = 'homem';
-    } else {
-      animal = 'vaca';
-    }
-  }
 } else {
-  if (classe === 'inseto') {
-    if (alimentacao === 'hematofago') {
-      animal = 'pulga';
+    if (classe === 'inseto') {
+        if (alimentacao === 'hematofago') {
+            animal = 'pulga';
+        } else {
+            animal = 'lagarta';
+        }
     } else {
-      animal = 'lagarta';
+        if (alimentacao === 'hematofago') {
+            animal = 'sanguessuga';
+        } else {
+            animal = 'minhoca';
+        }
     }
-  } else {
-    if (alimentacao === 'hematofago') {
-      animal = 'sanguessuga';
-    } else {
-      animal = 'minhoca';
-    }
-  }
 }
 
 // Saída de dados

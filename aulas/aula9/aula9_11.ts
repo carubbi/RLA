@@ -15,25 +15,25 @@ entradaProcurado = prompt("Digite o valor procurado:"); // 7
 
 // Processamento
 if (entrada !== null && entradaProcurado !== null) {
-  procurado = parseInt(entradaProcurado);
-  partes = entrada.split(" ");
-  valores = [];
-  encontrado = false;
+    procurado = parseInt(entradaProcurado);
+    partes = entrada.split(" ");
+    valores = [];
+    encontrado = false;
 
-  for (i = 0; i < partes.length; i++) {
-    valores[i] = parseInt(partes[i]);
-  }
-
-  for (i = 0; i < valores.length; i++) {
-    if (valores[i] === procurado) {
-      encontrado = true;
+    for (i = 0; i < partes.length; i++) {
+        valores[i] = parseInt(partes[i]);
     }
-  }
 
-  // Saida
-  if (encontrado) {
-    console.log("Valor encontrado");
-  } else {
-    console.log("Valor nao encontrado");
-  }
+    for (i = 0; i < valores.length; i++) {
+        if (valores[i] === procurado) {
+            encontrado = true;
+        }
+    }
+
+    // Saida
+    if (encontrado) {
+        console.log("Valor encontrado");
+    } else {
+        console.log("Valor nao encontrado");
+    }
 }

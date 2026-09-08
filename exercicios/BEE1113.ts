@@ -8,21 +8,21 @@ entradaX = "";
 entradaY = "";
 
 while (entradaX !== null && entradaY !== null) {
-  entradaX = prompt('Digite X: ');
-  entradaY = prompt('Digite Y: ');
+    entradaX = prompt('Digite X: ');
+    entradaY = prompt('Digite Y: ');
 
-  if (entradaX !== null && entradaY !== null) {
-    x = parseInt(entradaX);
-    y = parseInt(entradaY);
+    if (entradaX !== null && entradaY !== null) {
+        x = parseInt(entradaX);
+        y = parseInt(entradaY);
 
-    if (x === y) {
-      break;
+        if (x === y) {
+            break;
+        }
+
+        if (x < y) {
+            console.log('Crescente');
+        } else {
+            console.log('Decrescente');
+        }
     }
-
-    if (x < y) {
-      console.log('Crescente');
-    } else {
-      console.log('Decrescente');
-    }
-  }
 }

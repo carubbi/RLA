@@ -11,26 +11,26 @@ diesel = 0;
 entradaCodigo = "";
 
 while (entradaCodigo !== null) {
-  entradaCodigo = prompt('Digite o codigo: ');
+    entradaCodigo = prompt('Digite o codigo: ');
 
-  if (entradaCodigo !== null) {
-    codigo = parseInt(entradaCodigo);
+    if (entradaCodigo !== null) {
+        codigo = parseInt(entradaCodigo);
 
-    if (codigo === 1) {
-      alcool++;
-    } else if (codigo === 2) {
-      gasolina++;
-    } else if (codigo === 3) {
-      diesel++;
-    } else if (codigo === 4) {
-      break;
+        if (codigo === 1) {
+            alcool++;
+        } else if (codigo === 2) {
+            gasolina++;
+        } else if (codigo === 3) {
+            diesel++;
+        } else if (codigo === 4) {
+            break;
+        }
     }
-  }
 }
 
 if (entradaCodigo !== null) {
-  console.log('MUITO OBRIGADO');
-  console.log(`Alcool: ${alcool}`);
-  console.log(`Gasolina: ${gasolina}`);
-  console.log(`Diesel: ${diesel}`);
+    console.log('MUITO OBRIGADO');
+    console.log(`Alcool: ${alcool}`);
+    console.log(`Gasolina: ${gasolina}`);
+    console.log(`Diesel: ${diesel}`);
 }

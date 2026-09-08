@@ -9,14 +9,14 @@ entradaNota = prompt("Digite a nota:"); // 8
 
 // Processamento
 if (entradaNota !== null) {
-  nota = parseFloat(entradaNota);
+    nota = parseFloat(entradaNota);
 
-  if (nota >= 0 && nota <= 10) {
-    mensagem = "Nota valida";
-  } else {
-    mensagem = "Nota invalida";
-  }
+    if (nota >= 0 && nota <= 10) {
+        mensagem = "Nota valida";
+    } else {
+        mensagem = "Nota invalida";
+    }
 
-  // Saida
-  console.log(mensagem);
+    // Saida
+    console.log(mensagem);
 }

@@ -13,7 +13,7 @@ media = (nota1 + nota2) / 2;
 
 // Saida
 if (media >= 7) {
-  console.log("Aprovado");
+    console.log("Aprovado");
 } else {
-  console.log("Reprovado");
+    console.log("Reprovado");
 }

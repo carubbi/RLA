@@ -8,10 +8,10 @@ let i: number;
 valores = [];
 
 for (i = 0; i < 3; i++) {
-  valores[i] = i + 1;
+    valores[i] = i + 1;
 }
 
 // Saida
 for (i = 0; i < valores.length; i++) {
-  console.log(valores[i]);
+    console.log(valores[i]);
 }

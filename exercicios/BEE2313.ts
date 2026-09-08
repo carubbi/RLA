@@ -10,30 +10,30 @@ entradaB = prompt('Digite B: ');
 entradaC = prompt('Digite C: ');
 
 if (entradaA !== null && entradaB !== null && entradaC !== null) {
-  a = parseInt(entradaA);
-  b = parseInt(entradaB);
-  c = parseInt(entradaC);
+    a = parseInt(entradaA);
+    b = parseInt(entradaB);
+    c = parseInt(entradaC);
 
-  if (a >= b + c || b >= a + c || c >= a + b) {
-    console.log('Invalido');
-  } else if (a === b && b === c) {
-    console.log('Valido-Equilatero');
-    console.log('Retangulo: N');
-  } else if (a !== b && a !== c && b !== c) {
-    console.log('Valido-Escaleno');
+    if (a >= b + c || b >= a + c || c >= a + b) {
+        console.log('Invalido');
+    } else if (a === b && b === c) {
+        console.log('Valido-Equilatero');
+        console.log('Retangulo: N');
+    } else if (a !== b && a !== c && b !== c) {
+        console.log('Valido-Escaleno');
 
-    if (a * a === b * b + c * c || b * b === a * a + c * c || c * c === a * a + b * b) {
-      console.log('Retangulo: S');
+        if (a * a === b * b + c * c || b * b === a * a + c * c || c * c === a * a + b * b) {
+            console.log('Retangulo: S');
+        } else {
+            console.log('Retangulo: N');
+        }
     } else {
-      console.log('Retangulo: N');
-    }
-  } else {
-    console.log('Valido-Isoceles');
+        console.log('Valido-Isoceles');
 
-    if (a * a === b * b + c * c || b * b === a * a + c * c || c * c === a * a + b * b) {
-      console.log('Retangulo: S');
-    } else {
-      console.log('Retangulo: N');
+        if (a * a === b * b + c * c || b * b === a * a + c * c || c * c === a * a + b * b) {
+            console.log('Retangulo: S');
+        } else {
+            console.log('Retangulo: N');
+        }
     }
-  }
 }

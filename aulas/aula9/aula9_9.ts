@@ -19,21 +19,21 @@ entrada = prompt("Digite as notas separadas por quebra de linha:");
 
 // Processamento
 if (entrada !== null) {
-  partes = entrada.split("\n");
-  notas = [];
-  soma = 0;
+    partes = entrada.split("\n");
+    notas = [];
+    soma = 0;
 
-  for (i = 0; i < partes.length; i++) {
-    notas[i] = parseFloat(partes[i]);
-  }
+    for (i = 0; i < partes.length; i++) {
+        notas[i] = parseFloat(partes[i]);
+    }
 
-  for (i = 0; i < notas.length; i++) {
-    soma = soma + notas[i];
-  }
+    for (i = 0; i < notas.length; i++) {
+        soma = soma + notas[i];
+    }
 
-  media = soma / notas.length;
+    media = soma / notas.length;
 
-  // Saida
-  console.log("Soma: " + soma);
-  console.log("Media: " + media);
+    // Saida
+    console.log("Soma: " + soma);
+    console.log("Media: " + media);
 }

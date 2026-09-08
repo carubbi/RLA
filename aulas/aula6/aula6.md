@@ -52,13 +52,13 @@ entrada = prompt("Digite a idade:");
 
 // Processamento
 if (entrada !== null) {
-  idade = parseInt(entrada);
+    idade = parseInt(entrada);
 
-  if (idade >= 18) {
-    console.log("Maior de idade");
-  } else {
-    console.log("Menor de idade");
-  }
+    if (idade >= 18) {
+        console.log("Maior de idade");
+    } else {
+        console.log("Menor de idade");
+    }
 }
 ```
 
@@ -82,12 +82,12 @@ entradaNota2 = prompt("Digite a segunda nota:");
 
 // Processamento
 if (entradaNota1 !== null && entradaNota2 !== null) {
-  nota1 = parseFloat(entradaNota1);
-  nota2 = parseFloat(entradaNota2);
-  media = (nota1 + nota2) / 2;
+    nota1 = parseFloat(entradaNota1);
+    nota2 = parseFloat(entradaNota2);
+    media = (nota1 + nota2) / 2;
 
-  // Saida
-  console.log(media);
+    // Saida
+    console.log(media);
 }
 ```
 
@@ -115,18 +115,18 @@ condicao2 = prompt("Digite a condicao 2 (true/false):");
 
 // Processamento
 if (condicao1 !== null && condicao2 !== null) {
-  if (condicao1 === "true") {
-    if (condicao2 === "true") {
-      mensagem = "As duas condicoes sao verdadeiras";
+    if (condicao1 === "true") {
+        if (condicao2 === "true") {
+            mensagem = "As duas condicoes sao verdadeiras";
+        } else {
+            mensagem = "A primeira e verdadeira, mas a segunda e falsa";
+        }
     } else {
-      mensagem = "A primeira e verdadeira, mas a segunda e falsa";
+        mensagem = "A primeira condicao e falsa";
     }
-  } else {
-    mensagem = "A primeira condicao e falsa";
-  }
 
-  // Saida
-  console.log(mensagem);
+    // Saida
+    console.log(mensagem);
 }
 ```
 
@@ -144,18 +144,18 @@ condicao2 = prompt("Digite a condicao 2 (true/false):");
 
 // Processamento
 if (condicao1 !== null && condicao2 !== null) {
-  if (condicao1 === "true") {
-    mensagem = "Acao 1";
-  } else {
-    if (condicao2 === "true") {
-      mensagem = "Acao 2";
+    if (condicao1 === "true") {
+        mensagem = "Acao 1";
     } else {
-      mensagem = "Acao 3";
+        if (condicao2 === "true") {
+            mensagem = "Acao 2";
+        } else {
+            mensagem = "Acao 3";
+        }
     }
-  }
 
-  // Saida
-  console.log(mensagem);
+    // Saida
+    console.log(mensagem);
 }
 ```
 
@@ -167,9 +167,9 @@ Na estrutura composta, existe apenas uma decisão principal com dois caminhos:
 
 ```typescript
 if (condicao) {
-  console.log("Caminho verdadeiro");
+    console.log("Caminho verdadeiro");
 } else {
-  console.log("Caminho falso");
+    console.log("Caminho falso");
 }
 ```
 
@@ -177,13 +177,13 @@ Na estrutura aninhada, um dos caminhos contém uma nova decisão:
 
 ```typescript
 if (condicao1) {
-  if (condicao2) {
-    console.log("Caminho mais especifico");
-  } else {
-    console.log("Outro resultado especifico");
-  }
+    if (condicao2) {
+        console.log("Caminho mais especifico");
+    } else {
+        console.log("Outro resultado especifico");
+    }
 } else {
-  console.log("Tratamento alternativo");
+    console.log("Tratamento alternativo");
 }
 ```
 
@@ -210,25 +210,25 @@ entradaNota2 = prompt("Digite a nota 2 do aluno:");
 
 // Processamento
 if (entradaNota1 !== null && entradaNota2 !== null) {
-  alunoNota1 = parseFloat(entradaNota1);
-  alunoNota2 = parseFloat(entradaNota2);
+    alunoNota1 = parseFloat(entradaNota1);
+    alunoNota2 = parseFloat(entradaNota2);
 
-  if (alunoNota1 >= 0 && alunoNota2 >= 0) {
-    alunoMedia = (alunoNota1 + alunoNota2) / 2;
+    if (alunoNota1 >= 0 && alunoNota2 >= 0) {
+        alunoMedia = (alunoNota1 + alunoNota2) / 2;
 
-    if (alunoMedia >= 5) {
-      situacaoAluno = "aprovado!";
+        if (alunoMedia >= 5) {
+            situacaoAluno = "aprovado!";
+        } else {
+            situacaoAluno = "reprovado!";
+        }
+
+        mensagem = `Media: ${alunoMedia}. O aluno esta ${situacaoAluno}`;
     } else {
-      situacaoAluno = "reprovado!";
+        mensagem = "A nota deve ser maior ou igual a zero!";
     }
 
-    mensagem = `Media: ${alunoMedia}. O aluno esta ${situacaoAluno}`;
-  } else {
-    mensagem = "A nota deve ser maior ou igual a zero!";
-  }
-
-  // Saida
-  console.log(mensagem);
+    // Saida
+    console.log(mensagem);
 }
 ```
 
@@ -273,21 +273,21 @@ entradaIdade = prompt("Digite a idade do candidato:");
 
 // Processamento
 if (entradaIdade !== null) {
-  idade = parseInt(entradaIdade);
+    idade = parseInt(entradaIdade);
 
-  if (idade < 0) {
-    mensagem = "A idade deve ser maior ou igual a zero!";
-  } else {
-    if (idade >= 18) {
-      mensagem = "O candidato esta apto a tirar a CNH!";
+    if (idade < 0) {
+        mensagem = "A idade deve ser maior ou igual a zero!";
     } else {
-      anosApto = 18 - idade;
-      mensagem = `Faltam ${anosApto} ano(s) para o candidato estar apto!`;
+        if (idade >= 18) {
+            mensagem = "O candidato esta apto a tirar a CNH!";
+        } else {
+            anosApto = 18 - idade;
+            mensagem = `Faltam ${anosApto} ano(s) para o candidato estar apto!`;
+        }
     }
-  }
 
-  // Saida
-  console.log(mensagem);
+    // Saida
+    console.log(mensagem);
 }
 ```
 
@@ -309,27 +309,27 @@ entradaNota2 = prompt("Digite a nota 2:");
 
 // Processamento
 if (entradaNota1 !== null && entradaNota2 !== null) {
-  nota1 = parseFloat(entradaNota1);
-  nota2 = parseFloat(entradaNota2);
+    nota1 = parseFloat(entradaNota1);
+    nota2 = parseFloat(entradaNota2);
 
-  if (nota1 >= 0 && nota2 >= 0) {
-    media = (nota1 + nota2) / 2;
+    if (nota1 >= 0 && nota2 >= 0) {
+        media = (nota1 + nota2) / 2;
 
-    if (media >= 7) {
-      resultado = "Aluno aprovado com bom desempenho.";
+        if (media >= 7) {
+            resultado = "Aluno aprovado com bom desempenho.";
+        } else {
+            if (media >= 5) {
+                resultado = "Aluno aprovado.";
+            } else {
+                resultado = "Aluno reprovado.";
+            }
+        }
     } else {
-      if (media >= 5) {
-        resultado = "Aluno aprovado.";
-      } else {
-        resultado = "Aluno reprovado.";
-      }
+        resultado = "Notas invalidas.";
     }
-  } else {
-    resultado = "Notas invalidas.";
-  }
 
-  // Saida
-  console.log(resultado);
+    // Saida
+    console.log(resultado);
 }
 ```
 
@@ -354,32 +354,32 @@ entradaValorCurso = prompt("Digite o valor do curso:");
 
 // Processamento
 if (perfil !== null && matriculaAtiva !== null && entradaValorCurso !== null) {
-  valorCurso = parseFloat(entradaValorCurso);
+    valorCurso = parseFloat(entradaValorCurso);
 
-  switch (perfil) {
-    case "aluno":
-      if (matriculaAtiva === "true") {
-        valorFinal = valorCurso * 0.8;
-      } else {
-        valorFinal = valorCurso;
-      }
-      break;
-    case "professor":
-      valorFinal = valorCurso * 0.7;
-      break;
-    case "visitante":
-      valorFinal = valorCurso;
-      break;
-    default:
-      valorFinal = -1;
-  }
+    switch (perfil) {
+        case "aluno":
+            if (matriculaAtiva === "true") {
+                valorFinal = valorCurso * 0.8;
+            } else {
+                valorFinal = valorCurso;
+            }
+            break;
+        case "professor":
+            valorFinal = valorCurso * 0.7;
+            break;
+        case "visitante":
+            valorFinal = valorCurso;
+            break;
+        default:
+            valorFinal = -1;
+    }
 
-  // Saida
-  if (valorFinal === -1) {
-    console.log("Perfil invalido.");
-  } else {
-    console.log(`R$ ${valorFinal.toFixed(2)}`);
-  }
+    // Saida
+    if (valorFinal === -1) {
+        console.log("Perfil invalido.");
+    } else {
+        console.log(`R$ ${valorFinal.toFixed(2)}`);
+    }
 }
 ```
 
@@ -398,25 +398,25 @@ entradaOpcaoMenu = prompt("Digite a opcao do menu:");
 
 // Processamento
 if (usuarioAutenticado !== null && entradaOpcaoMenu !== null) {
-  opcaoMenu = parseInt(entradaOpcaoMenu);
+    opcaoMenu = parseInt(entradaOpcaoMenu);
 
-  if (usuarioAutenticado === "true") {
-    switch (opcaoMenu) {
-      case 1:
-        mensagem = "Consultar notas";
-        break;
-      case 2:
-        mensagem = "Calcular media";
-        break;
-      default:
-        mensagem = "Opcao invalida";
+    if (usuarioAutenticado === "true") {
+        switch (opcaoMenu) {
+            case 1:
+                mensagem = "Consultar notas";
+                break;
+            case 2:
+                mensagem = "Calcular media";
+                break;
+            default:
+                mensagem = "Opcao invalida";
+        }
+    } else {
+        mensagem = "Usuario nao autenticado";
     }
-  } else {
-    mensagem = "Usuario nao autenticado";
-  }
 
-  // Saida
-  console.log(mensagem);
+    // Saida
+    console.log(mensagem);
 }
 ```
 
@@ -442,38 +442,38 @@ comCheddar = prompt("Deseja adicionar cheddar? (s/n):");
 
 // Processamento
 if (entradaCodigo !== null && entradaQuantidade !== null && comCheddar !== null) {
-  codigo = parseInt(entradaCodigo);
-  quantidade = parseInt(entradaQuantidade);
+    codigo = parseInt(entradaCodigo);
+    quantidade = parseInt(entradaQuantidade);
 
-  if (codigo >= 1 && codigo <= 4) {
-    precoUnitario = 0;
+    if (codigo >= 1 && codigo <= 4) {
+        precoUnitario = 0;
 
-    switch (codigo) {
-      case 1:
-        precoUnitario = 4.0;
-        break;
-      case 2:
-        precoUnitario = 4.5;
-        break;
-      case 3:
-        precoUnitario = 5.0;
-        if (comCheddar === "s") {
-          precoUnitario = precoUnitario + 0.5;
+        switch (codigo) {
+            case 1:
+                precoUnitario = 4.0;
+                break;
+            case 2:
+                precoUnitario = 4.5;
+                break;
+            case 3:
+                precoUnitario = 5.0;
+                if (comCheddar === "s") {
+                    precoUnitario = precoUnitario + 0.5;
+                }
+                break;
+            case 4:
+                precoUnitario = 2.0;
+                break;
         }
-        break;
-      case 4:
-        precoUnitario = 2.0;
-        break;
+
+        valorTotal = precoUnitario * quantidade;
+        mensagem = `Total: R$ ${valorTotal.toFixed(2)}`;
+    } else {
+        mensagem = "Codigo invalido";
     }
 
-    valorTotal = precoUnitario * quantidade;
-    mensagem = `Total: R$ ${valorTotal.toFixed(2)}`;
-  } else {
-    mensagem = "Codigo invalido";
-  }
-
-  // Saida
-  console.log(mensagem);
+    // Saida
+    console.log(mensagem);
 }
 ```
 
@@ -492,16 +492,16 @@ entradaNota = prompt("Digite a nota:");
 
 // Processamento
 if (entradaNota !== null) {
-  nota = parseFloat(entradaNota);
+    nota = parseFloat(entradaNota);
 
-  if (nota >= 0 && nota <= 10) {
-    mensagem = "Nota valida";
-  } else {
-    mensagem = "Nota invalida";
-  }
+    if (nota >= 0 && nota <= 10) {
+        mensagem = "Nota valida";
+    } else {
+        mensagem = "Nota invalida";
+    }
 
-  // Saida
-  console.log(mensagem);
+    // Saida
+    console.log(mensagem);
 }
 ```
 

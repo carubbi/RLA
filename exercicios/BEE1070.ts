@@ -11,12 +11,12 @@ if (entradaX !== null) {
 x = parseInt(entradaX);
 
 if (x % 2 === 0) {
-  x++;
+    x++;
 }
 
 // Saída de dados
 for (i = 0; i < 6; i++) {
-  console.log(x);
-  x += 2;
+    console.log(x);
+    x += 2;
 }
 }

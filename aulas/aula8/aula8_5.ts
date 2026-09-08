@@ -1,41 +1,41 @@
 // Aula 8 - Exemplo 5 (contagem, soma e multiplicacao)
 function calcularContagem(n: number): number {
-  let contador: number;
-  let i: number;
+    let contador: number;
+    let i: number;
 
-  contador = 0;
+    contador = 0;
 
-  for (i = 1; i <= n; i++) {
-    contador++;
-  }
+    for (i = 1; i <= n; i++) {
+        contador++;
+    }
 
-  return contador;
+    return contador;
 }
 
 function calcularSoma(n: number): number {
-  let soma: number;
-  let i: number;
+    let soma: number;
+    let i: number;
 
-  soma = 0;
+    soma = 0;
 
-  for (i = 1; i <= n; i++) {
-    soma = soma + i;
-  }
+    for (i = 1; i <= n; i++) {
+        soma = soma + i;
+    }
 
-  return soma;
+    return soma;
 }
 
 function calcularProduto(n: number): number {
-  let produto: number;
-  let i: number;
+    let produto: number;
+    let i: number;
 
-  produto = 1;
+    produto = 1;
 
-  for (i = 1; i <= n; i++) {
-    produto = produto * i;
-  }
+    for (i = 1; i <= n; i++) {
+        produto = produto * i;
+    }
 
-  return produto;
+    return produto;
 }
 
 // Declaracao de variaveis
@@ -50,13 +50,13 @@ entradaN = prompt("Digite o valor de n:"); // 4
 
 // Processamento
 if (entradaN !== null) {
-  n = parseInt(entradaN);
-  contadorFinal = calcularContagem(n);
-  somaFinal = calcularSoma(n);
-  produtoFinal = calcularProduto(n);
+    n = parseInt(entradaN);
+    contadorFinal = calcularContagem(n);
+    somaFinal = calcularSoma(n);
+    produtoFinal = calcularProduto(n);
 
-  // Saida
-  console.log("Contagem: " + contadorFinal);
-  console.log("Soma: " + somaFinal);
-  console.log("Produto: " + produtoFinal);
+    // Saida
+    console.log("Contagem: " + contadorFinal);
+    console.log("Soma: " + somaFinal);
+    console.log("Produto: " + produtoFinal);
 }

@@ -11,6 +11,6 @@ if (entradaNumero !== null) {
 numero = parseInt(entradaNumero);
 
 for (i = 2; i <= numero; i += 2) {
-  console.log(`${i}^2 = ${i * i}`);
+    console.log(`${i}^2 = ${i * i}`);
 }
 }

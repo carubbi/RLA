@@ -18,22 +18,22 @@ fora = 0;
 entradaNumero = "";
 
 for (i = 0; i < quantidade && entradaNumero !== null; i++) {
-  entradaNumero = prompt('Digite um valor: ');
+    entradaNumero = prompt('Digite um valor: ');
 
-  if (entradaNumero !== null) {
-    numero = parseInt(entradaNumero);
+    if (entradaNumero !== null) {
+        numero = parseInt(entradaNumero);
 
-    if (numero >= 10 && numero <= 20) {
-      dentro++;
-    } else {
-      fora++;
+        if (numero >= 10 && numero <= 20) {
+            dentro++;
+        } else {
+            fora++;
+        }
     }
-  }
 }
 
 // Saída de dados
 if (entradaNumero !== null) {
-  console.log(`${dentro} in`);
-  console.log(`${fora} out`);
+    console.log(`${dentro} in`);
+    console.log(`${fora} out`);
 }
 }

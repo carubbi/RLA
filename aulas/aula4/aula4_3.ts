@@ -13,11 +13,11 @@ password = parseInt(entradaPassword);
 
 // Regras de autenticacao
 if (username !== "usuario123" && password !== 123456) {
-  console.log("Login e senha incorretos");
+    console.log("Login e senha incorretos");
 } else if (username !== "usuario123") {
-  console.log("Login incorreto");
+    console.log("Login incorreto");
 } else if (password !== 123456) {
-  console.log("Senha incorreta");
+    console.log("Senha incorreta");
 } else {
-  console.log("Usuario autenticado");
+    console.log("Usuario autenticado");
 }

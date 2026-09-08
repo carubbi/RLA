@@ -39,10 +39,10 @@ retorno é escrito depois dos parênteses.
 
 ```typescript
 function somar(a: number, b: number): number {
-  let resultado: number;
+    let resultado: number;
 
-  resultado = a + b;
-  return resultado;
+    resultado = a + b;
+    return resultado;
 }
 ```
 
@@ -57,7 +57,7 @@ Quando uma função apenas executa uma ação e não devolve um valor, seu retor
 
 ```typescript
 function exibirResultado(valor: number): void {
-  console.log(valor);
+    console.log(valor);
 }
 ```
 
@@ -68,7 +68,7 @@ não entrega um resultado por meio de `return`.
 
 ```typescript
 function somar(a: number, b: number): number {
-  return a + b;
+    return a + b;
 }
 
 // Declaracao de variaveis
@@ -84,12 +84,12 @@ entradaNum2 = prompt("Digite o segundo numero:");
 
 // Processamento
 if (entradaNum1 !== null && entradaNum2 !== null) {
-  num1 = parseFloat(entradaNum1);
-  num2 = parseFloat(entradaNum2);
-  total = somar(num1, num2);
+    num1 = parseFloat(entradaNum1);
+    num2 = parseFloat(entradaNum2);
+    total = somar(num1, num2);
 
-  // Saida
-  console.log(total);
+    // Saida
+    console.log(total);
 }
 ```
 
@@ -102,10 +102,10 @@ ser usada naquele bloco.
 
 ```typescript
 function mostrarMensagem(nome: string): void {
-  let saudacao: string;
+    let saudacao: string;
 
-  saudacao = "Ola, " + nome;
-  console.log(saudacao);
+    saudacao = "Ola, " + nome;
+    console.log(saudacao);
 }
 
 // Declaracao de variaveis
@@ -115,8 +115,8 @@ let aluno: string | null;
 aluno = prompt("Digite o nome do aluno:");
 
 if (aluno !== null) {
-  mostrarMensagem(aluno);
-  console.log(aluno);
+    mostrarMensagem(aluno);
+    console.log(aluno);
 }
 ```
 
@@ -128,7 +128,7 @@ Uma mesma função pode ser chamada várias vezes.
 
 ```typescript
 function calcularDobro(numero: number): number {
-  return numero * 2;
+    return numero * 2;
 }
 
 console.log(calcularDobro(5));
@@ -141,15 +141,15 @@ respeitem o tipo declarado.
 
 ```typescript
 function situacaoAluno(media: number): string {
-  if (media >= 7) {
-    return "Aprovado";
-  }
+    if (media >= 7) {
+        return "Aprovado";
+    }
 
-  if (media >= 5) {
-    return "Recuperacao";
-  }
+    if (media >= 5) {
+        return "Recuperacao";
+    }
 
-  return "Reprovado";
+    return "Reprovado";
 }
 ```
 
@@ -159,11 +159,11 @@ converte a entrada e outra calcula a média.
 
 ```typescript
 function converterNumero(texto: string): number {
-  return parseFloat(texto);
+    return parseFloat(texto);
 }
 
 function calcularMedia(nota1: number, nota2: number): number {
-  return (nota1 + nota2) / 2;
+    return (nota1 + nota2) / 2;
 }
 
 // Declaracao de variaveis
@@ -178,10 +178,10 @@ entradaNota1 = prompt("Digite a primeira nota:");
 entradaNota2 = prompt("Digite a segunda nota:");
 
 if (entradaNota1 !== null && entradaNota2 !== null) {
-  nota1 = converterNumero(entradaNota1);
-  nota2 = converterNumero(entradaNota2);
-  media = calcularMedia(nota1, nota2);
-  console.log(media);
+    nota1 = converterNumero(entradaNota1);
+    nota2 = converterNumero(entradaNota2);
+    media = calcularMedia(nota1, nota2);
+    console.log(media);
 }
 ```
 
@@ -202,16 +202,16 @@ entradaB = prompt("Digite o valor de b:");
 
 // Processamento
 if (entradaA !== null && entradaB !== null) {
-  a = parseFloat(entradaA);
-  b = parseFloat(entradaB);
+    a = parseFloat(entradaA);
+    b = parseFloat(entradaB);
 
-  temporaria = a;
-  a = b;
-  b = temporaria;
+    temporaria = a;
+    a = b;
+    b = temporaria;
 
-  // Saida
-  console.log(a);
-  console.log(b);
+    // Saida
+    console.log(a);
+    console.log(b);
 }
 ```
 
@@ -224,42 +224,42 @@ simples e explícitos.
 
 ```typescript
 function calcularContagem(n: number): number {
-  let contador: number;
-  let i: number;
+    let contador: number;
+    let i: number;
 
-  contador = 0;
+    contador = 0;
 
-  for (i = 1; i <= n; i++) {
-    contador++;
-  }
+    for (i = 1; i <= n; i++) {
+        contador++;
+    }
 
-  return contador;
+    return contador;
 }
 
 function calcularSoma(n: number): number {
-  let soma: number;
-  let i: number;
+    let soma: number;
+    let i: number;
 
-  soma = 0;
+    soma = 0;
 
-  for (i = 1; i <= n; i++) {
-    soma = soma + i;
-  }
+    for (i = 1; i <= n; i++) {
+        soma = soma + i;
+    }
 
-  return soma;
+    return soma;
 }
 
 function calcularProduto(n: number): number {
-  let produto: number;
-  let i: number;
+    let produto: number;
+    let i: number;
 
-  produto = 1;
+    produto = 1;
 
-  for (i = 1; i <= n; i++) {
-    produto = produto * i;
-  }
+    for (i = 1; i <= n; i++) {
+        produto = produto * i;
+    }
 
-  return produto;
+    return produto;
 }
 ```
 
@@ -269,16 +269,16 @@ O fatorial de um número inteiro não negativo `n` é o produto dos números de
 
 ```typescript
 function calcularFatorial(n: number): number {
-  let fatorial: number;
-  let i: number;
+    let fatorial: number;
+    let i: number;
 
-  fatorial = 1;
+    fatorial = 1;
 
-  for (i = 1; i <= n; i++) {
-    fatorial = fatorial * i;
-  }
+    for (i = 1; i <= n; i++) {
+        fatorial = fatorial * i;
+    }
 
-  return fatorial;
+    return fatorial;
 }
 
 // Declaracao de variaveis
@@ -289,8 +289,8 @@ let numero: number;
 entrada = prompt("Digite um numero:");
 
 if (entrada !== null) {
-  numero = parseInt(entrada);
-  console.log(calcularFatorial(numero));
+    numero = parseInt(entrada);
+    console.log(calcularFatorial(numero));
 }
 ```
 
@@ -302,29 +302,29 @@ Na sequência de Fibonacci, cada termo é obtido pela soma dos dois anteriores.
 
 ```typescript
 function gerarFibonacci(quantidade: number): string {
-  let a: number;
-  let b: number;
-  let proximo: number;
-  let i: number;
-  let sequencia: string;
+    let a: number;
+    let b: number;
+    let proximo: number;
+    let i: number;
+    let sequencia: string;
 
-  a = 0;
-  b = 1;
-  sequencia = "";
+    a = 0;
+    b = 1;
+    sequencia = "";
 
-  for (i = 1; i <= quantidade; i++) {
-    sequencia += a;
+    for (i = 1; i <= quantidade; i++) {
+        sequencia += a;
 
-    if (i < quantidade) {
-      sequencia += ", ";
+        if (i < quantidade) {
+            sequencia += ", ";
+        }
+
+        proximo = a + b;
+        a = b;
+        b = proximo;
     }
 
-    proximo = a + b;
-    a = b;
-    b = proximo;
-  }
-
-  return sequencia;
+    return sequencia;
 }
 ```
 
@@ -341,22 +341,22 @@ Para converter um inteiro decimal positivo em binário:
 
 ```typescript
 function decimalParaBinario(numero: number): string {
-  let binario: string;
-  let resto: number;
+    let binario: string;
+    let resto: number;
 
-  if (numero === 0) {
-    return "0";
-  }
+    if (numero === 0) {
+        return "0";
+    }
 
-  binario = "";
+    binario = "";
 
-  while (numero > 0) {
-    resto = numero % 2;
-    binario = resto + binario;
-    numero = Math.trunc(numero / 2);
-  }
+    while (numero > 0) {
+        resto = numero % 2;
+        binario = resto + binario;
+        numero = Math.trunc(numero / 2);
+    }
 
-  return binario;
+    return binario;
 }
 ```
 
@@ -375,44 +375,44 @@ positivos: `1` e ele mesmo.
 
 ```typescript
 function ehPrimo(numero: number): boolean {
-  let divisor: number;
+    let divisor: number;
 
-  if (numero < 2) {
-    return false;
-  }
-
-  for (divisor = 2; divisor < numero; divisor++) {
-    if (numero % divisor === 0) {
-      return false;
+    if (numero < 2) {
+        return false;
     }
-  }
 
-  return true;
+    for (divisor = 2; divisor < numero; divisor++) {
+        if (numero % divisor === 0) {
+            return false;
+        }
+    }
+
+    return true;
 }
 
 function gerarNPrimeirosPrimos(quantidade: number): string {
-  let encontrados: number;
-  let candidato: number;
-  let resposta: string;
+    let encontrados: number;
+    let candidato: number;
+    let resposta: string;
 
-  encontrados = 0;
-  candidato = 2;
-  resposta = "";
+    encontrados = 0;
+    candidato = 2;
+    resposta = "";
 
-  while (encontrados < quantidade) {
-    if (ehPrimo(candidato)) {
-      if (encontrados > 0) {
-        resposta += ", ";
-      }
+    while (encontrados < quantidade) {
+        if (ehPrimo(candidato)) {
+            if (encontrados > 0) {
+                resposta += ", ";
+            }
 
-      resposta += candidato;
-      encontrados++;
+            resposta += candidato;
+            encontrados++;
+        }
+
+        candidato++;
     }
 
-    candidato++;
-  }
-
-  return resposta;
+    return resposta;
 }
 ```
 
@@ -452,10 +452,10 @@ Para aproximar a progressão da linguagem Java:
 
 ```typescript
 function calcularDobro(numero: number): number {
-  let dobro: number;
+    let dobro: number;
 
-  dobro = numero * 2;
-  return dobro;
+    dobro = numero * 2;
+    return dobro;
 }
 ```
 

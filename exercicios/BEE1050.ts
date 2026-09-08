@@ -16,7 +16,7 @@ switch (DDD) {
         cidade = 'Brasilia';
         break;
     case 71:
-       cidade = 'Salvador';
+        cidade = 'Salvador';
         break;
     case 11:
         cidade = 'Sao Paulo';

@@ -24,7 +24,7 @@ Quando usar:
 Sintaxe:
 ```typescript
 if (condicao) {
-  console.log("Condicao verdadeira");
+    console.log("Condicao verdadeira");
 }
 ```
 
@@ -35,7 +35,7 @@ let temperatura: number;
 temperatura = 32;
 
 if (temperatura > 30) {
-  console.log("Dia quente");
+    console.log("Dia quente");
 }
 
 console.log("Verificacao concluida");
@@ -49,9 +49,9 @@ Quando usar:
 Sintaxe:
 ```typescript
 if (condicao) {
-  console.log("Caminho A");
+    console.log("Caminho A");
 } else {
-  console.log("Caminho B");
+    console.log("Caminho B");
 }
 ```
 
@@ -62,9 +62,9 @@ let nota: number;
 nota = 6.5;
 
 if (nota >= 7) {
-  console.log("Aprovado");
+    console.log("Aprovado");
 } else {
-  console.log("Reprovado");
+    console.log("Reprovado");
 }
 ```
 
@@ -77,11 +77,11 @@ Quando usar:
 Sintaxe:
 ```typescript
 if (condicao1) {
-  console.log("Bloco 1");
+    console.log("Bloco 1");
 } else if (condicao2) {
-  console.log("Bloco 2");
+    console.log("Bloco 2");
 } else {
-  console.log("Bloco final");
+    console.log("Bloco final");
 }
 ```
 
@@ -92,13 +92,13 @@ let media: number;
 media = 8.2;
 
 if (media >= 9) {
-  console.log("Conceito A");
+    console.log("Conceito A");
 } else if (media >= 7) {
-  console.log("Conceito B");
+    console.log("Conceito B");
 } else if (media >= 5) {
-  console.log("Conceito C");
+    console.log("Conceito C");
 } else {
-  console.log("Conceito D");
+    console.log("Conceito D");
 }
 ```
 
@@ -113,14 +113,14 @@ Quando usar:
 Sintaxe:
 ```typescript
 switch (expressao) {
-  case valor1:
-    console.log("Bloco 1");
-    break;
-  case valor2:
-    console.log("Bloco 2");
-    break;
-  default:
-    console.log("Sem correspondencia");
+    case valor1:
+        console.log("Bloco 1");
+        break;
+    case valor2:
+        console.log("Bloco 2");
+        break;
+    default:
+        console.log("Sem correspondencia");
 }
 ```
 
@@ -131,29 +131,29 @@ let dia: number;
 dia = 3;
 
 switch (dia) {
-  case 1:
-    console.log("Domingo");
-    break;
-  case 2:
-    console.log("Segunda-feira");
-    break;
-  case 3:
-    console.log("Terca-feira");
-    break;
-  case 4:
-    console.log("Quarta-feira");
-    break;
-  case 5:
-    console.log("Quinta-feira");
-    break;
-  case 6:
-    console.log("Sexta-feira");
-    break;
-  case 7:
-    console.log("Sabado");
-    break;
-  default:
-    console.log("Dia invalido");
+    case 1:
+        console.log("Domingo");
+        break;
+    case 2:
+        console.log("Segunda-feira");
+        break;
+    case 3:
+        console.log("Terca-feira");
+        break;
+    case 4:
+        console.log("Quarta-feira");
+        break;
+    case 5:
+        console.log("Quinta-feira");
+        break;
+    case 6:
+        console.log("Sexta-feira");
+        break;
+    case 7:
+        console.log("Sabado");
+        break;
+    default:
+        console.log("Dia invalido");
 }
 ```
 

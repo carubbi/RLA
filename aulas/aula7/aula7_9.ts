@@ -9,9 +9,9 @@ entradaQuantidade = prompt("Digite a quantidade de iteracoes:"); // 3
 
 // Processamento
 if (entradaQuantidade !== null) {
-  quantidade = parseInt(entradaQuantidade);
+    quantidade = parseInt(entradaQuantidade);
 
-  for (i = 0; i < quantidade; i++) {
-    console.log(i);
-  }
+    for (i = 0; i < quantidade; i++) {
+        console.log(i);
+    }
 }

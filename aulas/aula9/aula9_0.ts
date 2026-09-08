@@ -7,11 +7,11 @@ let i1: number;
 valores1 = [];
 
 for (i1 = 0; i1 < 3; i1++) {
-  valores1[i1] = i1 + 1;
+    valores1[i1] = i1 + 1;
 }
 
 for (i1 = 0; i1 < valores1.length; i1++) {
-  console.log(valores1[i1]);
+    console.log(valores1[i1]);
 }
 
 console.log("\n=== 2) Acesso por indice ===");
@@ -31,7 +31,7 @@ notas3 = [8.5, 7.0, 9.2];
 notas3[1] = 8.0;
 
 for (i3 = 0; i3 < notas3.length; i3++) {
-  console.log(notas3[i3]);
+    console.log(notas3[i3]);
 }
 
 console.log("\n=== 4) Uso de length ===");
@@ -52,7 +52,7 @@ let i5: number;
 notas5 = [8.5, 7.0, 9.2, 6.5, 10.0];
 
 for (i5 = 0; i5 < notas5.length; i5++) {
-  console.log(notas5[i5]);
+    console.log(notas5[i5]);
 }
 
 console.log("\n=== 6) Preenchimento com varios prompt (simulado) ===");
@@ -64,11 +64,11 @@ notas6Prompt = [];
 entradas6Prompt = ["8.5", "7.0", "9.2", "6.5", "10.0"];
 
 for (i6Prompt = 0; i6Prompt < entradas6Prompt.length; i6Prompt++) {
-  notas6Prompt[i6Prompt] = parseFloat(entradas6Prompt[i6Prompt]);
+    notas6Prompt[i6Prompt] = parseFloat(entradas6Prompt[i6Prompt]);
 }
 
 for (i6Prompt = 0; i6Prompt < notas6Prompt.length; i6Prompt++) {
-  console.log(notas6Prompt[i6Prompt]);
+    console.log(notas6Prompt[i6Prompt]);
 }
 
 console.log("\n=== 7) split com espaco ===");
@@ -82,11 +82,11 @@ partes6 = entrada6.split(" ");
 numeros6 = [];
 
 for (i6 = 0; i6 < partes6.length; i6++) {
-  numeros6[i6] = parseFloat(partes6[i6]);
+    numeros6[i6] = parseFloat(partes6[i6]);
 }
 
 for (i6 = 0; i6 < numeros6.length; i6++) {
-  console.log(numeros6[i6]);
+    console.log(numeros6[i6]);
 }
 
 console.log("\n=== 8) split com quebra de linha ===");
@@ -100,11 +100,11 @@ partes7 = entrada7.split("\n");
 numeros7 = [];
 
 for (i7 = 0; i7 < partes7.length; i7++) {
-  numeros7[i7] = parseFloat(partes7[i7]);
+    numeros7[i7] = parseFloat(partes7[i7]);
 }
 
 for (i7 = 0; i7 < numeros7.length; i7++) {
-  console.log(numeros7[i7]);
+    console.log(numeros7[i7]);
 }
 
 console.log("\n=== 9) Soma e media ===");
@@ -121,11 +121,11 @@ notas8 = [];
 soma8 = 0;
 
 for (i8 = 0; i8 < partes8.length; i8++) {
-  notas8[i8] = parseFloat(partes8[i8]);
+    notas8[i8] = parseFloat(partes8[i8]);
 }
 
 for (i8 = 0; i8 < notas8.length; i8++) {
-  soma8 = soma8 + notas8[i8];
+    soma8 = soma8 + notas8[i8];
 }
 
 media8 = soma8 / notas8.length;
@@ -146,17 +146,17 @@ partes9 = entrada9.split(" ");
 valores9 = [];
 
 for (i9 = 0; i9 < partes9.length; i9++) {
-  valores9[i9] = parseInt(partes9[i9]);
+    valores9[i9] = parseInt(partes9[i9]);
 }
 
 maior9 = valores9[0];
 posicao9 = 0;
 
 for (i9 = 1; i9 < valores9.length; i9++) {
-  if (valores9[i9] > maior9) {
-    maior9 = valores9[i9];
-    posicao9 = i9;
-  }
+    if (valores9[i9] > maior9) {
+        maior9 = valores9[i9];
+        posicao9 = i9;
+    }
 }
 
 console.log("Maior valor: " + maior9);
@@ -178,19 +178,19 @@ valores10 = [];
 encontrado10 = false;
 
 for (i10 = 0; i10 < partes10.length; i10++) {
-  valores10[i10] = parseInt(partes10[i10]);
+    valores10[i10] = parseInt(partes10[i10]);
 }
 
 for (i10 = 0; i10 < valores10.length; i10++) {
-  if (valores10[i10] === procurado10) {
-    encontrado10 = true;
-  }
+    if (valores10[i10] === procurado10) {
+        encontrado10 = true;
+    }
 }
 
 if (encontrado10) {
-  console.log("Valor encontrado");
+    console.log("Valor encontrado");
 } else {
-  console.log("Valor nao encontrado");
+    console.log("Valor nao encontrado");
 }
 
 console.log("\n=== 12) Beecrowd 1018 - Cedulas ===");
@@ -205,8 +205,8 @@ cedulas11 = [100, 50, 20, 10, 5, 2, 1];
 console.log(valor11);
 
 for (i11 = 0; i11 < cedulas11.length; i11++) {
-  quantidade11 = parseInt(String(valor11 / cedulas11[i11]));
-  valor11 = valor11 % cedulas11[i11];
+    quantidade11 = parseInt(String(valor11 / cedulas11[i11]));
+    valor11 = valor11 % cedulas11[i11];
 
-  console.log(quantidade11 + " nota(s) de R$ " + cedulas11[i11] + ",00");
+    console.log(quantidade11 + " nota(s) de R$ " + cedulas11[i11] + ",00");
 }

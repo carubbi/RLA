@@ -15,9 +15,9 @@ B = parseInt(entradaB);
 
 // Saída de dados
 if ((A % B == 0) || (B % A == 0)) {
-  mensagem = 'Sao';
+    mensagem = 'Sao';
 } else {
-  mensagem = 'Nao sao';
+    mensagem = 'Nao sao';
 }
 
 console.log(`${mensagem} Multiplos`);

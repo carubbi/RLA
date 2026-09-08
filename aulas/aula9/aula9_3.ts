@@ -10,5 +10,5 @@ notas[1] = 8.0;
 
 // Saida
 for (i = 0; i < notas.length; i++) {
-  console.log(notas[i]);
+    console.log(notas[i]);
 }

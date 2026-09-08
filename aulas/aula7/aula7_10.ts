@@ -10,13 +10,13 @@ entradaLimite = prompt("Digite o limite da contagem:"); // 3
 
 // Processamento
 if (entradaLimite !== null) {
-  limite = parseInt(entradaLimite);
-  mensagem = "";
+    limite = parseInt(entradaLimite);
+    mensagem = "";
 
-  for (i = 0; i <= limite; i++) {
-    mensagem += `${i}\n`;
-  }
+    for (i = 0; i <= limite; i++) {
+        mensagem += `${i}\n`;
+    }
 
-  // Saida
-  console.log(mensagem);
+    // Saida
+    console.log(mensagem);
 }

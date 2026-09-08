@@ -39,7 +39,7 @@ Usada quando existe ação apenas para o caso verdadeiro.
 Sintaxe:
 ```typescript
 if (condicao) {
-  // executa se condicao for true
+    // executa se condicao for true
 }
 ```
 
@@ -65,7 +65,7 @@ valorCompra = parseFloat(entrada);
 
 // Regra: aplica desconto apenas acima de 100
 if (valorCompra > 100) {
-  valorCompra = valorCompra * 0.9; // desconto de 10%
+    valorCompra = valorCompra * 0.9; // desconto de 10%
 }
 
 // Saida final
@@ -101,9 +101,9 @@ Usada quando há ação para o caso verdadeiro e para o caso falso.
 Sintaxe:
 ```typescript
 if (condicao) {
-  // bloco verdadeiro
+    // bloco verdadeiro
 } else {
-  // bloco falso
+    // bloco falso
 }
 ```
 
@@ -131,9 +131,9 @@ salarioAtual = parseFloat(entrada);
 
 // Regra de negocio por faixa salarial
 if (salarioAtual <= 500) {
-  novoSalario = salarioAtual * 1.2;
+    novoSalario = salarioAtual * 1.2;
 } else {
-  novoSalario = salarioAtual * 1.1;
+    novoSalario = salarioAtual * 1.1;
 }
 
 // Saida formatada com 2 casas decimais
@@ -166,11 +166,11 @@ Usada quando existem mais de duas possibilidades de decisao.
 Sintaxe:
 ```typescript
 if (condicao1) {
-  // bloco 1
+    // bloco 1
 } else if (condicao2) {
-  // bloco 2
+    // bloco 2
 } else {
-  // bloco final (caso nenhuma condicao anterior seja verdadeira)
+    // bloco final (caso nenhuma condicao anterior seja verdadeira)
 }
 ```
 

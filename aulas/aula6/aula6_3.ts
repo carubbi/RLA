@@ -8,12 +8,12 @@ condicao = prompt("Digite o valor logico da condicao (true/false):"); // true
 
 // Processamento
 if (condicao !== null) {
-  if (condicao === "true") {
-    mensagem = "caminho verdadeiro";
-  } else {
-    mensagem = "caminho falso";
-  }
+    if (condicao === "true") {
+        mensagem = "caminho verdadeiro";
+    } else {
+        mensagem = "caminho falso";
+    }
 
-  // Saida
-  console.log(mensagem);
+    // Saida
+    console.log(mensagem);
 }

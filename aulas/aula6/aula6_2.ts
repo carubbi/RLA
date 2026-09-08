@@ -10,16 +10,16 @@ condicao2 = prompt("Digite o valor logico da condicao 2 (true/false):"); // true
 
 // Processamento
 if (condicao1 !== null && condicao2 !== null) {
-  if (condicao1 === "true") {
-    mensagem = "acao 1";
-  } else {
-    if (condicao2 === "true") {
-      mensagem = "acao 2";
+    if (condicao1 === "true") {
+        mensagem = "acao 1";
     } else {
-      mensagem = "acao 3";
+        if (condicao2 === "true") {
+            mensagem = "acao 2";
+        } else {
+            mensagem = "acao 3";
+        }
     }
-  }
 
-  // Saida
-  console.log(mensagem);
+    // Saida
+    console.log(mensagem);
 }

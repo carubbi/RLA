@@ -14,9 +14,9 @@ inicio = parseInt(entradaInicio);
 fim = parseInt(entradaFim);
 
 if (inicio < fim) {
-  duracao = fim - inicio;
+    duracao = fim - inicio;
 } else {
-  duracao = (24 - inicio) + fim;
+    duracao = (24 - inicio) + fim;
 }
 
 // Saída de dados

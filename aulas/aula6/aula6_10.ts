@@ -16,36 +16,36 @@ comCheddar = prompt("Se for X-Bacon, deseja adicionar cheddar? (s/n)"); // s
 
 // Processamento
 if (entradaCodigo !== null && entradaQuantidade !== null && comCheddar !== null) {
-  codigo = parseInt(entradaCodigo);
-  quantidade = parseInt(entradaQuantidade);
+    codigo = parseInt(entradaCodigo);
+    quantidade = parseInt(entradaQuantidade);
 
-  if (codigo >= 1 && codigo <= 4) {
-    precoUnitario = 0;
+    if (codigo >= 1 && codigo <= 4) {
+        precoUnitario = 0;
 
-    switch (codigo) {
-      case 1:
-        precoUnitario = 4.0;
-        break;
-      case 2:
-        precoUnitario = 4.5;
-        break;
-      case 3:
-        precoUnitario = 5.0;
-        if (comCheddar === "s") {
-          precoUnitario = precoUnitario + 0.5;
+        switch (codigo) {
+            case 1:
+                precoUnitario = 4.0;
+                break;
+            case 2:
+                precoUnitario = 4.5;
+                break;
+            case 3:
+                precoUnitario = 5.0;
+                if (comCheddar === "s") {
+                    precoUnitario = precoUnitario + 0.5;
+                }
+                break;
+            case 4:
+                precoUnitario = 2.0;
+                break;
         }
-        break;
-      case 4:
-        precoUnitario = 2.0;
-        break;
+
+        valorTotal = precoUnitario * quantidade;
+        mensagem = `Total: R$ ${valorTotal.toFixed(2)}`;
+    } else {
+        mensagem = "Codigo invalido";
     }
 
-    valorTotal = precoUnitario * quantidade;
-    mensagem = `Total: R$ ${valorTotal.toFixed(2)}`;
-  } else {
-    mensagem = "Codigo invalido";
-  }
-
-  // Saida
-  console.log(mensagem);
+    // Saida
+    console.log(mensagem);
 }

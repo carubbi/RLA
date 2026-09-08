@@ -8,19 +8,19 @@ entradaNumero = prompt("Digite um numero positivo:"); // -3
 
 // Processamento
 if (entradaNumero !== null) {
-  num = parseInt(entradaNumero);
+    num = parseInt(entradaNumero);
 
-  while (num <= 0 && entradaNumero !== null) {
-    console.log("Numero invalido");
-    entradaNumero = prompt("Digite um numero positivo:"); // 0, 7
+    while (num <= 0 && entradaNumero !== null) {
+        console.log("Numero invalido");
+        entradaNumero = prompt("Digite um numero positivo:"); // 0, 7
 
-    if (entradaNumero !== null) {
-      num = parseInt(entradaNumero);
+        if (entradaNumero !== null) {
+            num = parseInt(entradaNumero);
+        }
     }
-  }
 
-  // Saida
-  if (entradaNumero !== null) {
-    console.log("Numero valido");
-  }
+    // Saida
+    if (entradaNumero !== null) {
+        console.log("Numero valido");
+    }
 }

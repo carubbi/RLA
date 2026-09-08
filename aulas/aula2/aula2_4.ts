@@ -11,7 +11,7 @@ resto = num % 2;
 
 // Saida
 if (resto === 0) {
-  console.log("par");
+    console.log("par");
 } else {
-  console.log("impar");
+    console.log("impar");
 }

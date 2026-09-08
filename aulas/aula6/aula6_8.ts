@@ -13,33 +13,33 @@ entradaValorCurso = prompt("Digite o valor do curso: "); // 1200
 
 // Processamento
 if (perfil !== null && matriculaAtiva !== null && entradaValorCurso !== null) {
-  valorCurso = parseFloat(entradaValorCurso);
+    valorCurso = parseFloat(entradaValorCurso);
 
-  switch (perfil) {
-    case "aluno":
-      if (matriculaAtiva === "true") {
-        valorFinal = valorCurso * 0.8;
-      } else {
-        valorFinal = valorCurso;
-      }
-      break;
+    switch (perfil) {
+        case "aluno":
+            if (matriculaAtiva === "true") {
+                valorFinal = valorCurso * 0.8;
+            } else {
+                valorFinal = valorCurso;
+            }
+            break;
 
-    case "professor":
-      valorFinal = valorCurso * 0.7;
-      break;
+        case "professor":
+            valorFinal = valorCurso * 0.7;
+            break;
 
-    case "visitante":
-      valorFinal = valorCurso * 1.0;
-      break;
+        case "visitante":
+            valorFinal = valorCurso * 1.0;
+            break;
 
-    default:
-      valorFinal = -1;
-  }
+        default:
+            valorFinal = -1;
+    }
 
-  // Saida
-  if (valorFinal === -1) {
-    console.log("Perfil invalido.");
-  } else {
-    console.log(`R$ ${valorFinal.toFixed(2)}`);
-  }
+    // Saida
+    if (valorFinal === -1) {
+        console.log("Perfil invalido.");
+    } else {
+        console.log(`R$ ${valorFinal.toFixed(2)}`);
+    }
 }

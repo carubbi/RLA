@@ -1,6 +1,6 @@
 // Aula 8 - Exemplo 1 (funcao basica de soma)
 function somar(a: number, b: number): number {
-  return a + b;
+    return a + b;
 }
 
 // Declaracao de variaveis
@@ -16,10 +16,10 @@ entradaNum2 = prompt("Digite o segundo numero:"); // 7
 
 // Processamento
 if (entradaNum1 !== null && entradaNum2 !== null) {
-  num1 = parseFloat(entradaNum1);
-  num2 = parseFloat(entradaNum2);
-  total = somar(num1, num2);
+    num1 = parseFloat(entradaNum1);
+    num2 = parseFloat(entradaNum2);
+    total = somar(num1, num2);
 
-  // Saida
-  console.log(total); // 11
+    // Saida
+    console.log(total); // 11
 }

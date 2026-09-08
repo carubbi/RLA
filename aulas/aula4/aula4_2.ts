@@ -12,9 +12,9 @@ salarioAtual = parseFloat(entrada);
 
 // Regra de negocio por faixa salarial
 if (salarioAtual <= 500) {
-  novoSalario = salarioAtual * 1.2;
+    novoSalario = salarioAtual * 1.2;
 } else {
-  novoSalario = salarioAtual * 1.1;
+    novoSalario = salarioAtual * 1.1;
 }
 
 // Saida formatada com 2 casas decimais

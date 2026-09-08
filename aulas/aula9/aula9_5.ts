@@ -9,5 +9,5 @@ notas = [8.5, 7.0, 9.2, 6.5, 10.0];
 
 // Saida
 for (i = 0; i < notas.length; i++) {
-  console.log(notas[i]);
+    console.log(notas[i]);
 }

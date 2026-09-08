@@ -5,7 +5,7 @@ let temperatura: number;
 temperatura = 32;
 
 if (temperatura > 30) {
-  console.log('Dia quente');
+    console.log('Dia quente');
 }
 
 console.log('Verificacao concluida');
