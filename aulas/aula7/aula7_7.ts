@@ -1,28 +1,32 @@
-// Aula 7 - Exemplo 7 (do...while para pedir nota ate ela estar valida)
+// Aula 7 - Exemplo 7 (for para somar n numeros)
 // Declaracao de variaveis
-let entradaNota: string | null;
-let nota: number;
+let entradaQuantidade: string | null;
+let entradaNumero: string | null;
+let quantidade: number;
+let i: number;
+let num: number;
+let soma: number;
 
 // Entrada
-entradaNota = prompt("Digite uma nota de 0 a 10:"); // 12
+entradaQuantidade = prompt("Digite quantos numeros deseja somar:"); // 3
 
 // Processamento
-if (entradaNota !== null) {
-    nota = parseFloat(entradaNota);
+if (entradaQuantidade !== null) {
+    quantidade = parseInt(entradaQuantidade);
+    entradaNumero = "";
+    soma = 0;
 
-    do {
-        if (nota < 0 || nota > 10) {
-            console.log("Nota invalida");
-            entradaNota = prompt("Nota invalida. Digite uma nota de 0 a 10:"); // -1, 8
+    for (i = 1; i <= quantidade && entradaNumero !== null; i++) {
+        entradaNumero = prompt(`Digite o ${i}o numero:`); // 10, 20, 5
 
-            if (entradaNota !== null) {
-                nota = parseFloat(entradaNota);
-            }
+        if (entradaNumero !== null) {
+            num = parseInt(entradaNumero);
+            soma += num;
         }
-    } while ((nota < 0 || nota > 10) && entradaNota !== null);
+    }
 
     // Saida
-    if (entradaNota !== null) {
-        console.log(`Nota valida: ${nota}`);
+    if (entradaNumero !== null) {
+        console.log(soma);
     }
 }

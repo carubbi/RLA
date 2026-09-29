@@ -291,53 +291,11 @@ if (entradaIdade !== null) {
 }
 ```
 
-### 7. Exemplo prático 3: faixa de desempenho
-Uma vantagem das estruturas aninhadas é permitir decisões progressivas.
-
-```typescript
-// Declaracao de variaveis
-let entradaNota1: string | null;
-let entradaNota2: string | null;
-let nota1: number;
-let nota2: number;
-let media: number;
-let resultado: string;
-
-// Entrada
-entradaNota1 = prompt("Digite a nota 1:");
-entradaNota2 = prompt("Digite a nota 2:");
-
-// Processamento
-if (entradaNota1 !== null && entradaNota2 !== null) {
-    nota1 = parseFloat(entradaNota1);
-    nota2 = parseFloat(entradaNota2);
-
-    if (nota1 >= 0 && nota2 >= 0) {
-        media = (nota1 + nota2) / 2;
-
-        if (media >= 7) {
-            resultado = "Aluno aprovado com bom desempenho.";
-        } else {
-            if (media >= 5) {
-                resultado = "Aluno aprovado.";
-            } else {
-                resultado = "Aluno reprovado.";
-            }
-        }
-    } else {
-        resultado = "Notas invalidas.";
-    }
-
-    // Saida
-    console.log(resultado);
-}
-```
-
-### 8. Uso de `switch...case` em casos aninhados
+### 7. Uso de `switch...case` em casos aninhados
 Também é possível combinar `switch...case` e `if` quando o problema possui
 níveis diferentes de decisão.
 
-#### 8.1 `if` dentro de `switch`
+#### 7.1 `if` dentro de `switch`
 
 ```typescript
 // Declaracao de variaveis
@@ -383,7 +341,7 @@ if (perfil !== null && matriculaAtiva !== null && entradaValorCurso !== null) {
 }
 ```
 
-#### 8.2 `switch` dentro de `if`
+#### 7.2 `switch` dentro de `if`
 
 ```typescript
 // Declaracao de variaveis
@@ -420,7 +378,7 @@ if (usuarioAutenticado !== null && entradaOpcaoMenu !== null) {
 }
 ```
 
-#### 8.3 Lanche com adicional no X-Bacon
+#### 7.3 Lanche com adicional no X-Bacon
 Este exemplo é inspirado no problema `Lanche` do Beecrowd. Se o item escolhido
 for `X-Bacon`, uma decisão interna verifica a inclusão de cheddar.
 
@@ -477,7 +435,7 @@ if (entradaCodigo !== null && entradaQuantidade !== null && comCheddar !== null)
 }
 ```
 
-### 9. Quando não aninhar
+### 8. Quando não aninhar
 Nem todo problema precisa de aninhamento. Quando as verificações podem ser
 feitas ao mesmo tempo, uma expressão lógica única costuma ser mais clara.
 
@@ -507,7 +465,7 @@ if (entradaNota !== null) {
 
 Use o aninhamento quando uma decisão realmente depender da etapa anterior.
 
-### 10. Boas práticas e erros comuns
+### 9. Boas práticas e erros comuns
 
 - verificar `null` antes de converter ou comparar uma entrada;
 - manter a indentação correta para evidenciar os níveis da decisão;
@@ -517,7 +475,7 @@ Use o aninhamento quando uma decisão realmente depender da etapa anterior.
 - evitar aninhamentos excessivos quando uma expressão lógica simples resolver;
 - testar valores negativos, zero e limites exatos.
 
-### 11. Fechamento
+### 10. Fechamento
 Nesta aula, vimos:
 
 1. o conceito de estrutura condicional aninhada;

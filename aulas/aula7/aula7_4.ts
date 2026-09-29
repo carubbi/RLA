@@ -1,28 +1,25 @@
-// Aula 7 - Exemplo 4 (while para pedir numeros ate digitar 0)
-// Declaracao de variaveis
-let entradaNumero: string | null;
-let num: number;
-let soma: number;
+// Aula 7 - Exemplo 4 (do...while em uma bilheteria)
+let opcao: string | null;
+let qtd: number;
+let msg: string;
 
-// Entrada
-entradaNumero = prompt("Digite um numero (0 para encerrar):"); // 5
+qtd = 0;
 
-// Processamento
-if (entradaNumero !== null) {
-    num = parseInt(entradaNumero);
-    soma = 0;
+do {
+    opcao = prompt("Bilheteria: 1 vender, 2 consultar, 0 sair");
 
-    while (num !== 0 && entradaNumero !== null) {
-        soma += num;
-        entradaNumero = prompt("Digite um numero (0 para encerrar):"); // 3, 2, 0
-
-        if (entradaNumero !== null) {
-            num = parseInt(entradaNumero);
-        }
+    if (opcao === "1") {
+        qtd++;
+        msg = `Venda registrada. Total: ${qtd}`;
+    } else if (opcao === "2") {
+        msg = `Ingressos vendidos: ${qtd}`;
+    } else if (opcao === "0") {
+        msg = `Bilheteria encerrada. Total: ${qtd}`;
+    } else if (opcao === null) {
+        msg = "Operação cancelada";
+    } else {
+        msg = "Opção inválida";
     }
 
-    // Saida
-    if (entradaNumero !== null) {
-        console.log(soma);
-    }
-}
+    console.log(msg);
+} while (opcao !== "0" && opcao !== null);

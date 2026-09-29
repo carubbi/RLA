@@ -1,18 +1,20 @@
-// Aula 7 - Exemplo 2 (while para pedir um numero positivo)
+// Aula 7 - Exemplo 2 (while para pedir numeros ate digitar 0)
 // Declaracao de variaveis
 let entradaNumero: string | null;
 let num: number;
+let soma: number;
 
 // Entrada
-entradaNumero = prompt("Digite um numero positivo:"); // -3
+entradaNumero = prompt("Digite um numero (0 para encerrar):"); // 5
 
 // Processamento
 if (entradaNumero !== null) {
     num = parseInt(entradaNumero);
+    soma = 0;
 
-    while (num <= 0 && entradaNumero !== null) {
-        console.log("Numero invalido");
-        entradaNumero = prompt("Digite um numero positivo:"); // 0, 7
+    while (num !== 0 && entradaNumero !== null) {
+        soma += num;
+        entradaNumero = prompt("Digite um numero (0 para encerrar):"); // 3, 2, 0
 
         if (entradaNumero !== null) {
             num = parseInt(entradaNumero);
@@ -21,6 +23,6 @@ if (entradaNumero !== null) {
 
     // Saida
     if (entradaNumero !== null) {
-        console.log("Numero valido");
+        console.log(soma);
     }
 }

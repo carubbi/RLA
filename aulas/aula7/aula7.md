@@ -65,195 +65,62 @@ for (inicializacao; condicao; incremento) {
 
 ## 5. Exemplos práticos
 
-### Exemplo 1: `while` básico com contador
+### Exemplo 1: `while` até cancelar a entrada
 
 #### Descrição narrativa
-1. Ler a quantidade de iteracoes.
-2. Declarar um contador com valor inicial zero.
-3. Enquanto o contador for menor que a quantidade informada, mostrar seu valor.
-4. Incrementar o contador.
-5. Encerrar quando a condição for falsa.
+1. Iniciar a contagem de nomes em zero.
+2. Pedir um nome ao usuário.
+3. Enquanto a entrada não for cancelada, contar o nome e pedir outro.
+4. Mostrar quantos nomes foram informados.
+
+O usuário pode cancelar já na primeira pergunta; nesse caso, o bloco do
+`while` não será executado. A quantidade de repetições não é conhecida antes
+da execução.
 
 #### Fluxograma
 ```mermaid
 flowchart TD
-A([INICIO]) --> B[/quantidade/]
-B --> C[i = 0]
-C --> D{i < quantidade}
+A([INICIO]) --> B[total = 0]
+B --> C[/nome/]
+C --> D{nome !== null}
 subgraph SEQ [Laco while]
-D -- V --> E[/i/]
-E --> F[i++]
+D -- V --> E[total++]
+E --> F[/nome/]
 F -- LOOP --> D
 end
-D -- F --> G([FIM])
+D -- F --> G[/total/]
+G --> H([FIM])
 ```
 
 #### Teste de mesa
 
-Entrada escolhida: `quantidade = 3`
-
-| passo | i | i < quantidade | saída |
-| --- | --- | --- | --- |
-| 1 | 0 | V | 0 |
-| 2 | 1 | V | 1 |
-| 3 | 2 | V | 2 |
-| 4 | 3 | F | - |
-
-#### Código TypeScript (Programiz)
-```typescript
-// Declaracao de variaveis
-let entradaQuantidade: string | null;
-let i: number;
-let quantidade: number;
-
-// Entrada
-entradaQuantidade = prompt("Digite a quantidade de iteracoes:"); // 3
-
-// Processamento
-if (entradaQuantidade !== null) {
-    i = 0;
-    quantidade = parseInt(entradaQuantidade);
-
-    while (i < quantidade) {
-        console.log(i);
-        i++;
-    }
-}
-```
-
-### Exemplo 2: `while` para pedir um número positivo
-
-#### Descrição narrativa
-1. Ler um número.
-2. Enquanto o número for menor ou igual a zero, pedir outro número.
-3. Quando o número for positivo, mostrar a mensagem de valor válido.
-
-#### Fluxograma
-```mermaid
-flowchart TD
-A([INICIO]) --> B[/num/]
-B --> C{num <= 0}
-subgraph SEQ [Laco while]
-C -- V --> D[/Numero invalido/]
-D --> E[/num/]
-E -- LOOP --> C
-end
-C -- F --> F[/Numero valido/]
-F --> G([FIM])
-```
-
-#### Teste de mesa
-
-| passo | num | num <= 0 | mensagem | saída |
-| --- | --- | --- | --- | --- |
-| 1 | -3 | V | Numero invalido | Numero invalido |
-| 2 | 0 | V | Numero invalido\nNumero invalido | Numero invalido / Numero invalido |
-| 3 | 7 | F | Numero invalido\nNumero invalido\nNumero valido | Numero invalido / Numero invalido / Numero valido |
+| caso | nome recebido | nome !== null | total antes | total depois | saída |
+| --- | --- | --- | --- | --- | --- |
+| zero nomes | `null` | F | 0 | 0 | Nomes informados: 0 |
+| um nome | `Ana` | V | 0 | 1 | - |
+| um nome | `null` | F | 1 | 1 | Nomes informados: 1 |
+| três nomes | `Ana` | V | 0 | 1 | - |
+| três nomes | `Bia` | V | 1 | 2 | - |
+| três nomes | `Caio` | V | 2 | 3 | - |
+| três nomes | `null` | F | 3 | 3 | Nomes informados: 3 |
 
 #### Código TypeScript (Programiz)
 ```typescript
-// Declaracao de variaveis
-let entradaNumero: string | null;
-let num: number;
+let nome: string | null;
+let total: number;
 
-// Entrada
-entradaNumero = prompt("Digite um numero positivo:"); // -3
+total = 0;
+nome = prompt("Digite um nome (Cancelar para encerrar):");
 
-// Processamento
-if (entradaNumero !== null) {
-    num = parseInt(entradaNumero);
-
-    while (num <= 0 && entradaNumero !== null) {
-        console.log("Numero invalido");
-        entradaNumero = prompt("Digite um numero positivo:"); // 0, 7
-
-        if (entradaNumero !== null) {
-            num = parseInt(entradaNumero);
-        }
-    }
-
-    // Saida
-    if (entradaNumero !== null) {
-        console.log("Numero valido");
-    }
+while (nome !== null) {
+    total++;
+    nome = prompt("Digite um nome (Cancelar para encerrar):");
 }
+
+console.log(`Nomes informados: ${total}`);
 ```
 
-### Exemplo 3: `while` para pedir senha até acertar
-
-#### Descrição narrativa
-1. Ler a senha digitada.
-2. Enquanto a senha for diferente da senha correta, informar erro e pedir nova tentativa.
-3. Quando a senha correta for informada, mostrar mensagem de acesso liberado.
-
-#### Fluxograma
-```mermaid
-flowchart TD
-A([INICIO]) --> B[/senha/]
-B --> C{senha != 1234}
-subgraph SEQ [Laco while]
-C -- V --> D[/Senha incorreta/]
-D --> E[/senha/]
-E -- LOOP --> C
-end
-C -- F --> F[/Acesso liberado/]
-F --> G([FIM])
-```
-
-#### Teste de mesa
-
-| passo | senha | senha != 1234 | mensagem | saída |
-| --- | --- | --- | --- | --- |
-| 1 | 1111 | V | Senha incorreta | Senha incorreta |
-| 2 | 9999 | V | Senha incorreta\nSenha incorreta | Senha incorreta / Senha incorreta |
-| 3 | 1234 | F | Senha incorreta\nSenha incorreta\nAcesso liberado | Senha incorreta / Senha incorreta / Acesso liberado |
-
-#### Código TypeScript (Programiz)
-```typescript
-// Declaracao de variaveis
-let senha: string | null;
-let mensagem: string;
-
-// Entrada
-senha = prompt("Digite a senha:"); // 1111
-
-// Processamento
-mensagem = "";
-
-while (senha !== "1234" && senha !== null) {
-    mensagem += "Senha incorreta\n";
-    senha = prompt("Digite a senha:"); // 9999, 1234
-}
-
-if (senha !== null) {
-    mensagem += "Acesso liberado";
-
-    // Saida
-    console.log(mensagem);
-}
-```
-
-#### Opção equivalente com `console.log()` dentro do `while`
-```typescript
-// Declaracao de variaveis
-let senha: string | null;
-
-// Entrada
-senha = prompt("Digite a senha:"); // 1111
-
-// Processamento
-while (senha !== "1234" && senha !== null) {
-    console.log("Senha incorreta");
-    senha = prompt("Digite a senha:"); // 9999, 1234
-}
-
-// Saida
-if (senha !== null) {
-    console.log("Acesso liberado");
-}
-```
-
-### Exemplo 4: `while` para pedir números até digitar 0
+### Exemplo 2: `while` para pedir números até digitar 0
 
 #### Descrição narrativa
 1. Ler um número.
@@ -316,51 +183,7 @@ if (entradaNumero !== null) {
 }
 ```
 
-### Exemplo 5: `do...while` básico com contador
-
-#### Descrição narrativa
-1. Declarar um contador com valor inicial zero.
-2. Executar o bloco ao menos uma vez.
-3. Mostrar o contador e incrementá-lo.
-4. Repetir enquanto o contador for menor que 3.
-
-#### Fluxograma
-```mermaid
-flowchart TD
-A([INICIO]) --> B[i = 0]
-A --> C
-subgraph SEQ [Laco do...while]
-C[/i/]
-C --> D[i++]
-D --> E{i < 3}
-end
-E -- V --> C
-E -- F --> F([FIM])
-```
-
-#### Teste de mesa
-
-| passo | i | i < 3 após incremento | saída |
-| --- | --- | --- | --- |
-| 1 | 0 | V | 0 |
-| 2 | 1 | V | 1 |
-| 3 | 2 | F | 2 |
-
-#### Código TypeScript (Programiz)
-```typescript
-// Declaracao de variaveis
-let i: number;
-
-// Processamento
-i = 0;
-
-do {
-    console.log(i);
-    i++;
-} while (i < 3);
-```
-
-### Exemplo 6: `do...while` para pedir uma senha
+### Exemplo 3: `do...while` para pedir uma senha
 
 #### Descrição narrativa
 1. Ler uma senha.
@@ -411,210 +234,83 @@ if (senha !== null) {
 ```
 
 
-### Exemplo 7: `do...while` para pedir um número positivo
+### Exemplo 4: `do...while` em uma bilheteria
 
 #### Descrição narrativa
-1. Ler um número.
-2. Verificar se o número é positivo.
-3. Se não for, pedir novamente.
-4. Repetir até receber um número positivo.
+1. Iniciar em zero a quantidade de ingressos vendidos.
+2. Mostrar o menu: vender um ingresso, consultar o total ou sair.
+3. Executar a opção escolhida e mostrar uma mensagem.
+4. Repetir até escolher sair ou cancelar a entrada.
+
+O menu aparece ao menos uma vez. A quantidade de ingressos permanece entre as
+repetições.
 
 #### Fluxograma
 ```mermaid
 flowchart TD
-A([INICIO]) --> B[/num/]
-B --> C
-subgraph SEQ [Laco do...while]
-C{num <= 0}
-C -- V --> D[/Numero invalido/]
-D --> E[/num/]
-E -- LOOP --> C
-end
-C -- F --> F[/Numero valido/]
-F --> G([FIM])
+A([INICIO]) --> B[qtd = 0]
+B --> C[/opcao/]
+C --> D{"opcao === #quot;1#quot;"}
+D -- V --> E[qtd++]
+E --> F[msg = Venda registrada]
+D -- F --> G{"opcao === #quot;2#quot;"}
+G -- V --> H[msg = Total vendido]
+G -- F --> I{"opcao === #quot;0#quot;"}
+I -- V --> J[msg = Bilheteria encerrada]
+I -- F --> K{opcao === null}
+K -- V --> L[msg = Operacao cancelada]
+K -- F --> M[msg = Opcao invalida]
+F --> N[/msg/]
+H --> N
+J --> N
+L --> N
+M --> N
+N --> O{"opcao !== #quot;0#quot; && opcao !== null"}
+O -- V --> C
+O -- F --> P([FIM])
 ```
 
 #### Teste de mesa
 
-| passo | num | num <= 0 | mensagem | saída |
-| --- | --- | --- | --- | --- |
-| 1 | -2 | V | Numero invalido | Numero invalido |
-| 2 | 0 | V | Numero invalido\nNumero invalido | Numero invalido / Numero invalido |
-| 3 | 5 | F | Numero invalido\nNumero invalido\nNumero valido | Numero invalido / Numero invalido / Numero valido |
+| passo | opcao | qtd antes | qtd depois | msg e saída | repete? |
+| --- | --- | --- | --- | --- | --- |
+| 1 | 1 | 0 | 1 | Venda registrada. Total: 1 | Sim |
+| 2 | 1 | 1 | 2 | Venda registrada. Total: 2 | Sim |
+| 3 | 2 | 2 | 2 | Ingressos vendidos: 2 | Sim |
+| 4 | 0 | 2 | 2 | Bilheteria encerrada. Total: 2 | Não |
+
+Se a primeira entrada for cancelada, `qtd` permanece em `0`, a saída é
+"Operação cancelada" e o laço termina.
 
 #### Código TypeScript (Programiz)
 ```typescript
-// Declaracao de variaveis
-let entradaNumero: string | null;
-let num: number;
-
-// Entrada
-entradaNumero = prompt("Digite um numero positivo:"); // -2
-
-// Processamento
-if (entradaNumero !== null) {
-    num = parseInt(entradaNumero);
-
-    do {
-        if (num <= 0) {
-            console.log("Numero invalido");
-            entradaNumero = prompt("Digite um numero positivo:"); // 0, 5
-
-            if (entradaNumero !== null) {
-                num = parseInt(entradaNumero);
-            }
-        }
-    } while (num <= 0 && entradaNumero !== null);
-
-    // Saida
-    if (entradaNumero !== null) {
-        console.log("Numero valido");
-    }
-}
-```
-
-### Exemplo 8: `do...while` para pedir nota até ela estar válida
-
-#### Descrição narrativa
-1. Ler uma nota.
-2. Se a nota for inválida, pedir novamente.
-3. Repetir enquanto a nota estiver fora do intervalo de 0 a 10.
-4. Mostrar a nota válida.
-
-#### Fluxograma
-```mermaid
-flowchart TD
-A([INICIO]) --> B[/nota/]
-B --> C{nota < 0 ou nota > 10}
-subgraph SEQ [Laco do...while]
-C -- V --> D[/Nota invalida/]
-D --> E[/nota/]
-E -- LOOP --> C
-end
-C -- F --> F[/Nota valida/]
-F --> G([FIM])
-```
-
-#### Teste de mesa
-
-| passo | nota | nota < 0 ou nota > 10 | mensagem | saída |
-| --- | --- | --- | --- | --- |
-| 1 | 12 | V | Nota invalida | Nota invalida |
-| 2 | -1 | V | Nota invalida\nNota invalida | Nota invalida / Nota invalida |
-| 3 | 8 | F | Nota invalida\nNota invalida\nNota valida: 8 | Nota invalida / Nota invalida / Nota valida: 8 |
-
-#### Código TypeScript (Programiz)
-```typescript
-// Declaracao de variaveis
-let entradaNota: string | null;
-let nota: number;
-
-// Entrada
-entradaNota = prompt("Digite uma nota de 0 a 10:"); // 12
-
-// Processamento
-if (entradaNota !== null) {
-    nota = parseFloat(entradaNota);
-
-    do {
-        if (nota < 0 || nota > 10) {
-            console.log("Nota invalida");
-            entradaNota = prompt("Nota invalida. Digite uma nota de 0 a 10:"); // -1, 8
-
-            if (entradaNota !== null) {
-                nota = parseFloat(entradaNota);
-            }
-        }
-    } while ((nota < 0 || nota > 10) && entradaNota !== null);
-
-    // Saida
-    if (entradaNota !== null) {
-        console.log(`Nota valida: ${nota}`);
-    }
-}
-```
-
-### Exemplo 9: `do...while` para mostrar menu até escolher sair
-
-#### Descrição narrativa
-1. Ler uma opção do menu.
-2. Executar a ação correspondente.
-3. Repetir enquanto a opção for diferente de zero.
-4. Encerrar quando o usuário escolher sair.
-
-#### Fluxograma
-```mermaid
-flowchart TD
-A([INICIO]) --> B[/opcao/]
-B --> C
-subgraph SEQ [Laco do...while]
-C{opcao == 1?}
-C -- V --> D[/Opcao 1 escolhida/]
-C -- F --> E{opcao == 2?}
-E -- V --> F[/Opcao 2 escolhida/]
-E -- F --> G{opcao == 3?}
-G -- V --> H[/Opcao 3 escolhida/]
-G -- F --> I{opcao == 0?}
-I -- V --> J[/Encerrar menu/]
-I -- F --> K[/Opcao invalida/]
-D --> L{opcao != 0}
-F --> L
-H --> L
-J --> L
-K --> L
-L -- V --> N[/opcao/]
-N -- LOOP --> C
-end
-L -- F --> M([FIM])
-```
-
-#### Teste de mesa
-
-| passo | opcao | opcao != 0 | mensagem | saída |
-| --- | --- | --- | --- | --- |
-| 1 | 2 | V | Opcao 2 escolhida | Opcao 2 escolhida |
-| 2 | 5 | V | Opcao 2 escolhida\nOpcao invalida | Opcao 2 escolhida / Opcao invalida |
-| 3 | 0 | F | Opcao 2 escolhida\nOpcao invalida\nEncerrar menu | Opcao 2 escolhida / Opcao invalida / Encerrar menu |
-
-#### Código TypeScript (Programiz)
-```typescript
-// Declaracao de variaveis
 let opcao: string | null;
-let mensagem: string;
+let qtd: number;
+let msg: string;
 
-// Entrada
-opcao = prompt("Digite uma opcao de 1 a 3 (0 para sair):"); // 2
+qtd = 0;
 
-// Processamento
-if (opcao !== null) {
-    mensagem = "";
+do {
+    opcao = prompt("Bilheteria: 1 vender, 2 consultar, 0 sair");
 
-    do {
-        if (opcao === "1") {
-            mensagem += "Opcao 1 escolhida\n";
-        } else if (opcao === "2") {
-            mensagem += "Opcao 2 escolhida\n";
-        } else if (opcao === "3") {
-            mensagem += "Opcao 3 escolhida\n";
-        } else if (opcao === "0") {
-            mensagem += "Encerrar menu\n";
-        } else {
-            mensagem += "Opcao invalida\n";
-        }
-
-        if (opcao !== "0") {
-            opcao = prompt("Digite uma opcao de 1 a 3 (0 para sair):"); // 5, 0
-        }
-    } while (opcao !== "0" && opcao !== null);
-
-    // Saida
-    if (opcao !== null) {
-        console.log(mensagem);
+    if (opcao === "1") {
+        qtd++;
+        msg = `Venda registrada. Total: ${qtd}`;
+    } else if (opcao === "2") {
+        msg = `Ingressos vendidos: ${qtd}`;
+    } else if (opcao === "0") {
+        msg = `Bilheteria encerrada. Total: ${qtd}`;
+    } else if (opcao === null) {
+        msg = "Operação cancelada";
+    } else {
+        msg = "Opção inválida";
     }
-}
+
+    console.log(msg);
+} while (opcao !== "0" && opcao !== null);
 ```
 
-### Exemplo 10: `for` básico com contador
+### Exemplo 5: `for` básico com contador
 
 #### Descrição narrativa
 1. Ler a quantidade de iteracoes.
@@ -668,66 +364,7 @@ if (entradaQuantidade !== null) {
 }
 ```
 
-### Exemplo 11: `for` para contar de 0 até um limite
-
-#### Descrição narrativa
-1. Ler o limite da contagem.
-2. Iniciar um contador em zero.
-3. Repetir enquanto o contador for menor ou igual ao limite.
-4. Mostrar cada valor do contador.
-
-#### Fluxograma
-```mermaid
-flowchart TD
-A([INICIO]) --> B[/limite/]
-B --> C[i = 0]
-C --> D{i <= limite}
-subgraph SEQ [Laco for]
-D -- V --> E[/i/]
-E --> F[i++]
-F -- LOOP --> D
-end
-D -- F --> G([FIM])
-```
-
-#### Teste de mesa
-
-Entrada escolhida: `limite = 3`
-
-| passo | i | i <= limite | saída |
-| --- | --- | --- | --- |
-| 1 | 0 | V | 0 |
-| 2 | 1 | V | 0 / 1 |
-| 3 | 2 | V | 0 / 1 / 2 |
-| 4 | 3 | V | 0 / 1 / 2 / 3 |
-| 5 | 4 | F | 0 / 1 / 2 / 3 |
-
-#### Código TypeScript (Programiz)
-```typescript
-// Declaracao de variaveis
-let entradaLimite: string | null;
-let limite: number;
-let i: number;
-let mensagem: string;
-
-// Entrada
-entradaLimite = prompt("Digite o limite da contagem:"); // 3
-
-// Processamento
-if (entradaLimite !== null) {
-    limite = parseInt(entradaLimite);
-    mensagem = "";
-
-    for (i = 0; i <= limite; i++) {
-        mensagem += `${i}\n`;
-    }
-
-    // Saida
-    console.log(mensagem);
-}
-```
-
-### Exemplo 12: `for` para gerar a tabuada
+### Exemplo 6: `for` para gerar a tabuada
 
 #### Descrição narrativa
 1. Ler um número.
@@ -790,7 +427,7 @@ if (entradaNumero !== null) {
 }
 ```
 
-### Exemplo 13: `for` para somar n números
+### Exemplo 7: `for` para somar n números
 
 #### Descrição narrativa
 1. Ler quantos números serão somados.
@@ -865,9 +502,9 @@ if (entradaQuantidade !== null) {
 
 | Estrutura | Quando usar | Exemplo desta aula |
 | --- | --- | --- |
-| `while` | quando nao sabemos quantas repeticoes vao acontecer | numero positivo, senha, soma ate digitar 0 |
-| `do...while` | quando o bloco precisa executar ao menos uma vez | contador basico, numero positivo, nota valida, menu |
-| `for` | quando existe contagem conhecida | contador basico, contagem, tabuada, soma de n numeros |
+| `while` | quando nao sabemos quantas repeticoes vao acontecer | nomes até cancelar, soma ate digitar 0 |
+| `do...while` | quando o bloco precisa executar ao menos uma vez | senha, menu |
+| `for` | quando existe contagem conhecida | contador basico, tabuada, soma de n numeros |
 
 ## 7. Fechamento
 Nesta aula, vimos que a escolha da estrutura de repetição depende do problema. O mais importante não é decorar sintaxe, mas perceber se o algoritmo depende de uma condição aberta, de uma execução mínima obrigatória ou de uma quantidade conhecida de repetições.

@@ -174,61 +174,54 @@ if (condicao1) {
 }
 ```
 
-Exemplo prático: autenticacao de usuario
+Exemplo prático: autenticação de usuário
 
 ```typescript
-let username: string;
-let entradaPassword: string;
-let password: number;
+let usuario: string;
+let senha: string;
+let msg: string;
 
-// Entrada de credenciais
-username = prompt("Digite o usuario:")!;
-entradaPassword = prompt("Digite a senha numerica:")!;
+usuario = prompt("Digite o usuario:")!;
+senha = prompt("Digite a senha:")!;
 
-// Conversao da senha para inteiro
-password = parseInt(entradaPassword);
-
-// Regras de autenticacao
-if (username !== "usuario123" && password !== 123456) {
-    console.log("Login e senha incorretos");
-} else if (username !== "usuario123") {
-    console.log("Login incorreto");
-} else if (password !== 123456) {
-    console.log("Senha incorreta");
+if (usuario !== "usuario123") {
+    msg = "Usuario incorreto";
+} else if (senha !== "123456") {
+    msg = "Senha incorreta";
 } else {
-    console.log("Usuario autenticado");
+    msg = "Acesso permitido";
 }
+
+console.log(msg);
 ```
+
+Cada caminho atribui um valor a `msg`. A saída ocorre uma vez, após a
+decisão. A senha é comparada como texto, sem conversão numérica.
 
 Fluxograma (Mermaid):
 
-`cond1 = username != "usuario123"`  
-`cond2 = password != 123456`
-
 ```mermaid
 flowchart TD
-A([INICIO]) --> B[\username, password\]
-B --> C{cond1 && cond2}
-C -- TRUE --> D[/Login e senha incorretos/]
-C -- FALSE --> E{cond1}
-E -- TRUE --> F[/Login incorreto/]
-E -- FALSE --> G{cond2}
-G -- TRUE --> H[/Senha incorreta/]
-G -- FALSE --> I[/Usuario autenticado/]
-D --> J([FIM])
-F --> J
-H --> J
-I --> J
+A([INÍCIO]) --> B[\usuario, senha\]
+B --> C{"usuario !== #quot;usuario123#quot;"}
+C -- SIM --> D["msg = #quot;Usuario incorreto#quot;"]
+C -- NÃO --> E{"senha !== #quot;123456#quot;"}
+E -- SIM --> F["msg = #quot;Senha incorreta#quot;"]
+E -- NÃO --> G["msg = #quot;Acesso permitido#quot;"]
+D --> H[/msg/]
+F --> H
+G --> H
+H --> I([FIM])
 ```
 
 Teste de mesa:
 
-| username   | password | cond1 && cond2 | cond1 | cond2 | Saida |
-| ---        | ---      | ---            | ---   | ---   | ---   |
-| usuario123 | 123456   | F              | F     | F     | Usuario autenticado |
-| usuario123 | 999999   | F              | F     | V     | Senha incorreta |
-| admin      | 123456   | F              | V     | F     | Login incorreto |
-| admin      | 999999   | V              | V     | V     | Login e senha incorretos |
+| usuario    | senha  | msg               |
+| ---------- | ------ | ----------------- |
+| usuario123 | 123456 | Acesso permitido  |
+| usuario123 | 999999 | Senha incorreta   |
+| admin      | 123456 | Usuario incorreto |
+| admin      | 999999 | Usuario incorreto |
 
 ### 6. Operador ternário
 Forma resumida para decisões simples em uma linha.
@@ -263,7 +256,7 @@ Nesta aula, vimos como:
 2. aplicar `if` em decisoes simples;
 3. aplicar `if...else` quando ha dois caminhos possiveis;
 4. aplicar `if...else if...else` em regras com varias faixas;
-5. organizar condicoes com `cond1`, `cond2` (e outras) para facilitar fluxograma e teste de mesa;
+5. atribuir uma mensagem em cada caminho e produzir uma única saída;
 6. resolver casos praticos de autenticacao e classificacao por intervalo de valores;
 7. usar operador ternario em situacoes curtas e objetivas.
 

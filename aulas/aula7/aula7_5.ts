@@ -1,11 +1,17 @@
-// Aula 7 - Exemplo 5 (do...while basico com contador)
+// Aula 7 - Exemplo 5 (for basico com contador)
 // Declaracao de variaveis
+let entradaQuantidade: string | null;
 let i: number;
+let quantidade: number;
+
+// Entrada
+entradaQuantidade = prompt("Digite a quantidade de iteracoes:"); // 3
 
 // Processamento
-i = 0;
+if (entradaQuantidade !== null) {
+    quantidade = parseInt(entradaQuantidade);
 
-do {
-    console.log(i);
-    i++;
-} while (i < 3);
+    for (i = 0; i < quantidade; i++) {
+        console.log(i);
+    }
+}

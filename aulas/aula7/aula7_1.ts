@@ -1,19 +1,13 @@
-// Aula 7 - Exemplo 1 (while basico com contador)
-// Declaracao de variaveis
-let entradaQuantidade: string | null;
-let i: number;
-let quantidade: number;
+// Aula 7 - Exemplo 1 (while ate cancelar a entrada)
+let nome: string | null;
+let total: number;
 
-// Entrada
-entradaQuantidade = prompt("Digite a quantidade de iteracoes:"); // 3
+total = 0;
+nome = prompt("Digite um nome (Cancelar para encerrar):");
 
-// Processamento
-if (entradaQuantidade !== null) {
-    i = 0;
-    quantidade = parseInt(entradaQuantidade);
-
-    while (i < quantidade) {
-        console.log(i);
-        i++;
-    }
+while (nome !== null) {
+    total++;
+    nome = prompt("Digite um nome (Cancelar para encerrar):");
 }
+
+console.log(`Nomes informados: ${total}`);

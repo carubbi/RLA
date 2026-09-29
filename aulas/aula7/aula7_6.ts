@@ -1,28 +1,24 @@
-// Aula 7 - Exemplo 6 (do...while para pedir um numero positivo)
+// Aula 7 - Exemplo 6 (for para gerar a tabuada)
 // Declaracao de variaveis
 let entradaNumero: string | null;
 let num: number;
+let fator: number;
+let prod: number;
+let tabuada: string;
 
 // Entrada
-entradaNumero = prompt("Digite um numero positivo:"); // -2
+entradaNumero = prompt("Digite o numero da tabuada:"); // 4
 
 // Processamento
 if (entradaNumero !== null) {
     num = parseInt(entradaNumero);
+    tabuada = "";
 
-    do {
-        if (num <= 0) {
-            console.log("Numero invalido");
-            entradaNumero = prompt("Digite um numero positivo:"); // 0, 5
-
-            if (entradaNumero !== null) {
-                num = parseInt(entradaNumero);
-            }
-        }
-    } while (num <= 0 && entradaNumero !== null);
+    for (fator = 1; fator <= 10; fator++) {
+        prod = num * fator;
+        tabuada += `${num} x ${fator} = ${prod}\n`;
+    }
 
     // Saida
-    if (entradaNumero !== null) {
-        console.log("Numero valido");
-    }
+    console.log(tabuada);
 }

@@ -1,22 +1,14 @@
-// Aula 7 - Exemplo 3 (while para pedir senha ate acertar)
-// Declaracao de variaveis
+// Aula 7 - Exemplo 3 (do...while para pedir uma senha)
 let senha: string | null;
-let mensagem: string;
 
-// Entrada
-senha = prompt("Digite a senha:"); // 1111
+do {
+    senha = prompt("Digite a senha:"); // 1111, 9999, 1234
 
-// Processamento
-mensagem = "";
-
-while (senha !== "1234" && senha !== null) {
-    mensagem += "Senha incorreta\n";
-    senha = prompt("Digite a senha:"); // 9999, 1234
-}
+    if (senha !== "1234" && senha !== null) {
+        console.log("Senha incorreta");
+    }
+} while (senha !== "1234" && senha !== null);
 
 if (senha !== null) {
-    mensagem += "Acesso liberado";
-
-    // Saida
-    console.log(mensagem);
+    console.log("Acesso liberado");
 }
