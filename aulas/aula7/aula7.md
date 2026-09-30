@@ -126,7 +126,7 @@ console.log(`Nomes informados: ${total}`);
 1. Ler um número.
 2. Enquanto o número for diferente de zero, somá-lo ao acumulador.
 3. Pedir um novo número.
-4. Quando o usuário digitar zero, mostrar a soma final.
+4. Quando o usuário digitar zero ou cancelar a entrada, mostrar a soma acumulada.
 
 #### Fluxograma
 ```mermaid
@@ -152,6 +152,10 @@ G --> H([FIM])
 | 3 | 2 | V | 8 | 10 | - |
 | 4 | 0 | F | 10 | 10 | 10 |
 
+Se a entrada for cancelada após `5` e `3`, o laço termina e a soma
+acumulada `8` é mostrada. Se o cancelamento ocorrer na primeira pergunta,
+nenhuma soma é mostrada.
+
 #### Código TypeScript (Programiz)
 ```typescript
 // Declaracao de variaveis
@@ -167,6 +171,7 @@ if (entradaNumero !== null) {
     num = parseInt(entradaNumero);
     soma = 0;
 
+    // Verifica null novamente: a nova leitura pode ser cancelada.
     while (num !== 0 && entradaNumero !== null) {
         soma += num;
         entradaNumero = prompt("Digite um numero (0 para encerrar):"); // 3, 2, 0
@@ -177,9 +182,7 @@ if (entradaNumero !== null) {
     }
 
     // Saida
-    if (entradaNumero !== null) {
-        console.log(soma);
-    }
+    console.log(soma);
 }
 ```
 
@@ -189,8 +192,8 @@ if (entradaNumero !== null) {
 1. Ler uma senha.
 2. Executar o teste ao menos uma vez.
 3. Se a senha estiver incorreta, informar erro.
-4. Repetir até que a senha correta seja digitada.
-5. Mostrar a mensagem de acesso liberado.
+4. Repetir até que a senha correta seja digitada ou a entrada seja cancelada.
+5. Mostrar a mensagem de acesso liberado somente se a senha estiver correta.
 
 #### Fluxograma
 ```mermaid
@@ -198,12 +201,14 @@ flowchart TD
 A([INICIO]) --> B
 subgraph SEQ [Laco do...while]
 B[/senha/]
-B --> C{senha != 1234}
-C -- V --> D[/Senha incorreta/]
+B --> C{senha === null}
+C -- F --> D{senha != 1234}
+D -- V --> E[/Senha incorreta/]
 end
-C -- V --> B
-C -- F --> E[/Acesso liberado/]
-E --> F([FIM])
+E --> B
+C -- V --> F([FIM])
+D -- F --> G[/Acesso liberado/]
+G --> F
 ```
 
 #### Teste de mesa
@@ -213,6 +218,9 @@ E --> F([FIM])
 | 1 | 1111 | V | Senha incorreta |
 | 2 | 9999 | V | Senha incorreta |
 | 3 | 1234 | F | Acesso liberado |
+
+Se a entrada for cancelada, o laço termina sem mostrar "Senha incorreta"
+nem "Acesso liberado".
 
 #### Código TypeScript (Programiz)
 ```typescript
@@ -228,7 +236,8 @@ do {
     }
 } while (senha !== "1234" && senha !== null);
 
-if (senha !== null) {
+// O laço também termina ao cancelar; só libera o acesso com a senha correta.
+if (senha === "1234") {
     console.log("Acesso liberado");
 }
 ```
@@ -433,7 +442,7 @@ if (entradaNumero !== null) {
 1. Ler quantos números serão somados.
 2. Repetir a leitura dessa quantidade de números.
 3. Somar cada valor ao acumulador.
-4. Mostrar a soma final.
+4. Mostrar a soma acumulada, inclusive se uma leitura for cancelada.
 
 #### Fluxograma
 ```mermaid
@@ -462,6 +471,9 @@ Entrada escolhida: `quantidade = 3`
 | 2 | 2 | V | 20 | 10 | 30 | - |
 | 3 | 3 | V | 5 | 30 | 35 | - |
 | 4 | 4 | F | - | 35 | 35 | 35 |
+
+Se a leitura de um número for cancelada, o laço termina e mostra a soma
+dos números informados até então.
 
 #### Código TypeScript (Programiz)
 ```typescript
@@ -492,9 +504,7 @@ if (entradaQuantidade !== null) {
     }
 
     // Saida
-    if (entradaNumero !== null) {
-        console.log(soma);
-    }
+    console.log(soma);
 }
 ```
 
