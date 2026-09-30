@@ -1,4 +1,9 @@
+// Declarar as variáveis
+let entN: string | null;
+let n: number;
+
 function calcularFatorial(numero: number): number {
+    // Declarar as variáveis
     let resultado: number;
     let contador: number;
 
@@ -11,12 +16,13 @@ function calcularFatorial(numero: number): number {
     return resultado;
 }
 
-let entradaN: string | null;
-let n: number;
+// Entrada de dados
+entN = prompt('Digite N: ');
 
-entradaN = prompt('Digite N: ');
+// Processamento dos dados
+if (entN !== null) {
+    n = parseInt(entN);
 
-if (entradaN !== null) {
-    n = parseInt(entradaN);
+    // Saída de dados
     console.log(calcularFatorial(n));
 }

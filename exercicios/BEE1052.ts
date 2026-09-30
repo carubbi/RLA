@@ -1,13 +1,13 @@
 // Declarar as variáveis
-let entradaMes: string;
+let entMes: string;
 let mes: number;
 let nomeMes: string;
 
 // Entrada de dados
-entradaMes = prompt('Digite o numero do mes: ')!;
+entMes = prompt('Digite o numero do mes: ')!;
 
 // Processamento dos dados
-mes = parseInt(entradaMes);
+mes = parseInt(entMes);
 
 switch (mes) {
     case 1:

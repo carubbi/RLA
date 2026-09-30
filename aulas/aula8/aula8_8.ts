@@ -1,33 +1,35 @@
 // Aula 8 - Exemplo 8 (conversao de decimal para binario)
-function decimalParaBinario(numero: number): string {
-    let binario: string;
+/** Converte um inteiro decimal para binário. */
+function decimalParaBinario(num: number): string {
+    // Declaração de variáveis locais
+    let bin: string;
     let resto: number;
 
-    if (numero === 0) {
+    if (num === 0) {
         return "0";
     }
 
-    binario = "";
+    bin = "";
 
-    while (numero > 0) {
-        resto = numero % 2;
-        binario = resto + binario;
-        numero = Math.trunc(numero / 2);
+    while (num > 0) {
+        resto = num % 2;
+        bin = resto + bin;
+        num = Math.trunc(num / 2);
     }
 
-    return binario;
+    return bin;
 }
 
-// Declaracao de variaveis
-let entradaNumero: string | null;
-let numero: number;
+// Declaração de variáveis globais
+let entNum: string | null;
+let num: number;
 
 // Entrada
-entradaNumero = prompt("Digite um numero decimal inteiro:"); // 13
+entNum = prompt("Digite um numero decimal inteiro:"); // 13
 
-if (entradaNumero !== null) {
-    numero = parseInt(entradaNumero);
+if (entNum !== null) {
+    num = parseInt(entNum);
 
     // Saida
-    console.log(decimalParaBinario(numero)); // 1101
+    console.log(decimalParaBinario(num)); // 1101
 }

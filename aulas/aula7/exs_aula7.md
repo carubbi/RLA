@@ -141,3 +141,22 @@ Se a proposta for começar com exercícios mais simples e próximos dos exemplos
 
 ## Fontes
 - Categoria Iniciante do Beecrowd: https://judge.beecrowd.com/en/questions/categories/1
+
+## Exercícios realocados das Aulas 4 a 6
+
+Estes problemas precisam de repetição, ensinada nesta aula. As decisões internas continuam usando os conteúdos anteriores.
+
+- `1074` Par ou Ímpar
+- `1914` De Quem é a Vez?
+- `1961` Pula Sapo
+- `2006` Identificando o Chá
+- `2031` Pedra, Papel, Ataque Aéreo
+- `2167` Falha do Motor
+- `2486` C Mais ou Menos?
+- `2540` Impeachment do Líder
+- `2547` Montanha-Russa
+- `2554` Pizza Antes de BH
+- `2630` Escala de Cinza
+- `2632` Magia e Espada
+- `2685` A Mudança
+- `2770` Tamanho da Placa

@@ -1,4 +1,9 @@
+// Declarar as variáveis
+let entrada: string | null;
+let n: number;
+
 function gerarSequencia(n: number): string {
+    // Declarar as variáveis
     let i: number;
     let quadrado: number;
     let cubo: number;
@@ -20,12 +25,13 @@ function gerarSequencia(n: number): string {
     return saida;
 }
 
-let entrada: string | null;
-let n: number;
-
+// Entrada de dados
 entrada = prompt('Digite N: ');
 
+// Processamento dos dados
 if (entrada !== null) {
     n = parseInt(entrada);
+
+    // Saída de dados
     console.log(gerarSequencia(n));
 }

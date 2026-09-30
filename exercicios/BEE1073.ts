@@ -1,16 +1,17 @@
 // Declarar as variáveis
-let entradaNumero: string | null;
+let entNum: string | null;
 let numero: number;
 let i: number;
 
 // Entrada de dados
-entradaNumero = prompt('Digite um numero: ');
+entNum = prompt('Digite um numero: ');
 
-// Processamento e saída de dados
-if (entradaNumero !== null) {
-numero = parseInt(entradaNumero);
+// Processamento dos dados
+if (entNum !== null) {
+    numero = parseInt(entNum);
 
-for (i = 2; i <= numero; i += 2) {
-    console.log(`${i}^2 = ${i * i}`);
-}
+    for (i = 2; i <= numero; i += 2) {
+        // Saída de dados
+        console.log(`${i}^2 = ${i * i}`);
+    }
 }

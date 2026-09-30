@@ -1,17 +1,17 @@
 // Declarar as variáveis
-let entradaDistancia: string;
-let entradaCombustivel: string;
+let entDist: string;
+let entComb: string;
 let distancia: number;
 let combustivel: number;
 let consumo: number;
 
 // Entrada de dados
-entradaDistancia = prompt('Digite a distancia total: ')!;
-entradaCombustivel = prompt('Digite o combustivel gasto: ')!;
+entDist = prompt('Digite a distancia total: ')!;
+entComb = prompt('Digite o combustivel gasto: ')!;
 
 // Processamento dos dados
-distancia = parseInt(entradaDistancia);
-combustivel = parseFloat(entradaCombustivel);
+distancia = parseInt(entDist);
+combustivel = parseFloat(entComb);
 consumo = distancia / combustivel;
 
 // Saída de dados

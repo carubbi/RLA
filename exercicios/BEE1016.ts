@@ -1,13 +1,13 @@
 // Declarar as variáveis
-let entradaDistancia: string;
+let entDist: string;
 let distancia: number;
 let tempo: number;
 
 // Entrada de dados
-entradaDistancia = prompt('Digite a distancia: ')!;
+entDist = prompt('Digite a distancia: ')!;
 
 // Processamento dos dados
-distancia = parseInt(entradaDistancia);
+distancia = parseInt(entDist);
 tempo = distancia * 2;
 
 // Saída de dados

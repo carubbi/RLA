@@ -18,7 +18,7 @@ Praticar a adaptação de exercícios já conhecidos do Beecrowd usando:
 
 ## Orientação
 
-Resolva os exercícios abaixo usando os arquivos da pasta `beecrowd` como referência.
+Resolva os exercícios abaixo usando os arquivos da pasta `exercicios` como referência.
 
 Quando fizer sentido, reescreva a entrada usando uma única string e `split`. Em problemas com vários valores relacionados, armazene os dados em um vetor e percorra com `for`.
 
@@ -48,3 +48,13 @@ Nem todos esses problemas exigem arrays naturalmente. Nos primeiros exercícios,
 ## Fontes
 
 - Categoria Iniciante do Beecrowd: https://judge.beecrowd.com/pt/problems/index/1
+
+## Exercícios realocados após a introdução de vetores e índices
+
+- `1193` Conversão entre Bases: usa acesso aos algarismos por índice.
+- `2003` Domingo de Manhã: separa hora e minuto com `split`.
+- `1929` Triângulo: armazena os quatro comprimentos em um vetor.
+- `2140` Duas Notas: percorre as denominações e testa pares.
+- `2176` Paridade: percorre a sequência de bits por índice.
+- `2582` System of a Download: consulta o nome da música em um vetor.
+- `2712` Rodízio Veicular: valida os caracteres da placa por índice.

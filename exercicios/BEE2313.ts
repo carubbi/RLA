@@ -1,20 +1,24 @@
-let entradaA: string | null;
-let entradaB: string | null;
-let entradaC: string | null;
+// Declarar as variáveis
+let entA: string | null;
+let entB: string | null;
+let entC: string | null;
 let a: number;
 let b: number;
 let c: number;
 
-entradaA = prompt('Digite A: ');
-entradaB = prompt('Digite B: ');
-entradaC = prompt('Digite C: ');
+// Entrada de dados
+entA = prompt('Digite A: ');
+entB = prompt('Digite B: ');
+entC = prompt('Digite C: ');
 
-if (entradaA !== null && entradaB !== null && entradaC !== null) {
-    a = parseInt(entradaA);
-    b = parseInt(entradaB);
-    c = parseInt(entradaC);
+// Processamento dos dados
+if (entA !== null && entB !== null && entC !== null) {
+    a = parseInt(entA);
+    b = parseInt(entB);
+    c = parseInt(entC);
 
     if (a >= b + c || b >= a + c || c >= a + b) {
+        // Saída de dados
         console.log('Invalido');
     } else if (a === b && b === c) {
         console.log('Valido-Equilatero');

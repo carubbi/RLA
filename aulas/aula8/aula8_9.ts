@@ -1,13 +1,15 @@
 // Aula 8 - Exemplo 9 (geracao dos n primeiros numeros primos)
-function ehPrimo(numero: number): boolean {
-    let divisor: number;
+/** Verifica se um número é primo. */
+function ehPrimo(num: number): boolean {
+    // Declaração de variáveis locais
+    let div: number;
 
-    if (numero < 2) {
+    if (num < 2) {
         return false;
     }
 
-    for (divisor = 2; divisor < numero; divisor++) {
-        if (numero % divisor === 0) {
+    for (div = 2; div < num; div++) {
+        if (num % div === 0) {
             return false;
         }
     }
@@ -15,41 +17,43 @@ function ehPrimo(numero: number): boolean {
     return true;
 }
 
-function gerarNPrimeirosPrimos(quantidade: number): string {
-    let encontrados: number;
-    let candidato: number;
-    let resposta: string;
+/** Gera a quantidade informada de números primos. */
+function gerarNPrimeirosPrimos(qtd: number): string {
+    // Declaração de variáveis locais
+    let cont: number;
+    let cand: number;
+    let resp: string;
 
-    encontrados = 0;
-    candidato = 2;
-    resposta = "";
+    cont = 0;
+    cand = 2;
+    resp = "";
 
-    while (encontrados < quantidade) {
-        if (ehPrimo(candidato)) {
-            if (encontrados > 0) {
-                resposta += ", ";
+    while (cont < qtd) {
+        if (ehPrimo(cand)) {
+            if (cont > 0) {
+                resp += ", ";
             }
 
-            resposta += candidato;
-            encontrados++;
+            resp += cand;
+            cont++;
         }
 
-        candidato++;
+        cand++;
     }
 
-    return resposta;
+    return resp;
 }
 
-// Declaracao de variaveis
-let entradaQuantidade: string | null;
-let quantidade: number;
+// Declaração de variáveis globais
+let entQtd: string | null;
+let qtd: number;
 
 // Entrada
-entradaQuantidade = prompt("Digite quantos numeros primos deseja gerar:"); // 5
+entQtd = prompt("Digite quantos numeros primos deseja gerar:"); // 5
 
-if (entradaQuantidade !== null) {
-    quantidade = parseInt(entradaQuantidade);
+if (entQtd !== null) {
+    qtd = parseInt(entQtd);
 
     // Saida
-    console.log(gerarNPrimeirosPrimos(quantidade)); // 2, 3, 5, 7, 11
+    console.log(gerarNPrimeirosPrimos(qtd)); // 2, 3, 5, 7, 11
 }

@@ -1,15 +1,15 @@
 // Declarar as variáveis
-let entradaRaio: string;
+let entRaio: string;
 let raio: number;
 let volume: number;
 let PI: number;
 
 // Entrada de dados
-entradaRaio = prompt('Digite o raio: ')!;
+entRaio = prompt('Digite o raio: ')!;
 
 // Processamento dos dados
 PI = 3.14159;
-raio = parseFloat(entradaRaio);
+raio = parseFloat(entRaio);
 volume = (4.0 / 3.0) * PI * raio * raio * raio;
 
 // Saída de dados

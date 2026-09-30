@@ -1,27 +1,29 @@
 // Aula 8 - Exemplo 6 (fatorial)
+/** Calcula o fatorial de n. */
 function calcularFatorial(n: number): number {
-    let fatorial: number;
+    // Declaração de variáveis locais
+    let fat: number;
     let i: number;
 
-    fatorial = 1;
+    fat = 1;
 
     for (i = 1; i <= n; i++) {
-        fatorial = fatorial * i;
+        fat *= i;
     }
 
-    return fatorial;
+    return fat;
 }
 
-// Declaracao de variaveis
-let entradaNumero: string | null;
-let numero: number;
+// Declaração de variáveis globais
+let entNum: string | null;
+let num: number;
 
 // Entrada
-entradaNumero = prompt("Digite um numero para calcular o fatorial:"); // 5
+entNum = prompt("Digite um numero para calcular o fatorial:"); // 5
 
-if (entradaNumero !== null) {
-    numero = parseInt(entradaNumero);
+if (entNum !== null) {
+    num = parseInt(entNum);
 
     // Saida
-    console.log(calcularFatorial(numero)); // 120
+    console.log(calcularFatorial(num)); // 120
 }

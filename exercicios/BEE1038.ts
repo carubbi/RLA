@@ -1,31 +1,36 @@
 // Declarar as variáveis
-let entradaCod: string;
-let entradaQtd: string;
+let entCod: string;
+let entQtd: string;
 let codProd: number;
 let qtdProd: number;
 let precoProd: number;
 let totalPagar: number;
 
 // Entrada de dados
-entradaCod = prompt('Digite o código do produto: ')!;
-entradaQtd = prompt('Digite a quantidade do produto: ')!;
+entCod = prompt('Digite o código do produto: ')!;
+entQtd = prompt('Digite a quantidade do produto: ')!;
 
 // Processamento dos dados
 // Converter as entradas (string) para numérico
-codProd = parseInt(entradaCod);
-qtdProd = parseInt(entradaQtd);
+codProd = parseInt(entCod);
+qtdProd = parseInt(entQtd);
 
-// Verificar o total a pagar
-if (codProd == 1) {
-    precoProd = 4;
-} else if (codProd == 2) {
-    precoProd = 4.4;
-} else if (codProd == 3) {
-    precoProd = 5;
-} else if (codProd == 4) {
-    precoProd = 2;
-} else {
-    precoProd = 1.5;
+// Definir o preço do produto
+switch (codProd) {
+    case 1:
+        precoProd = 4;
+        break;
+    case 2:
+        precoProd = 4.5;
+        break;
+    case 3:
+        precoProd = 5;
+        break;
+    case 4:
+        precoProd = 2;
+        break;
+    default:
+        precoProd = 1.5;
 }
 
 // Calcular o total a pagar

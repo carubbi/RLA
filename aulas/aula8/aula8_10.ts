@@ -1,27 +1,29 @@
 // Aula 8 - Exemplo 10 (Beecrowd 1153 - Fatorial Simples)
+/** Calcula o fatorial de n. */
 function calcularFatorial(n: number): number {
-    let fatorial: number;
+    // Declaração de variáveis locais
+    let fat: number;
     let i: number;
 
-    fatorial = 1;
+    fat = 1;
 
     for (i = 1; i <= n; i++) {
-        fatorial = fatorial * i;
+        fat *= i;
     }
 
-    return fatorial;
+    return fat;
 }
 
-// Declaracao de variaveis
-let entrada: string | null;
-let numero: number;
+// Declaração de variáveis globais
+let entNum: string | null;
+let num: number;
 
 // Entrada
-entrada = prompt("Digite um numero:"); // 5
+entNum = prompt("Digite um numero:"); // 5
 
-if (entrada !== null) {
-    numero = parseInt(entrada);
+if (entNum !== null) {
+    num = parseInt(entNum);
 
     // Saida
-    console.log(calcularFatorial(numero));
+    console.log(calcularFatorial(num));
 }

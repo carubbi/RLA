@@ -529,3 +529,8 @@ Para estudar, resolva nesta ordem:
 ## Fontes
 
 - Categoria Iniciante do Beecrowd: https://judge.beecrowd.com/pt/problems/index/1
+
+## Exercícios realocados após a introdução de matrizes
+
+- `2168` Crepúsculo em Portland: compara blocos de quatro posições de uma matriz.
+- `2542` Iu-Di-Oh!: armazena cartas e atributos em matrizes.

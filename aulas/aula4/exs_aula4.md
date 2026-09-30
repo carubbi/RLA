@@ -18,10 +18,7 @@ Os exercícios foram escolhidos para praticar decisões básicas, ainda sem laç
 ## 1. Exercícios indicados para `if`
 - `1035` Teste de Seleção 1
 - `1044` Múltiplos
-- `1074` Par ou Ímpar
-- `2140` Duas Notas
 - `2160` Nome no Formulário
-- `2176` Paridade
 
 ## 2. Exercícios indicados para `if...else`
 - `1037` Intervalo
@@ -29,10 +26,7 @@ Os exercícios foram escolhidos para praticar decisões básicas, ainda sem laç
 - `1048` Aumento de Salário
 - `1050` DDD
 - `1052` Mês
-- `2003` Domingo de Manhã
-- `2006` Identificando o Chá
 - `2344` Notas da Prova
-- `2685` A Mudança
 
 ## 3. Exercícios indicados para `if...else if...else`
 - `1038` Lanche
@@ -47,14 +41,12 @@ Os exercícios foram escolhidos para praticar decisões básicas, ainda sem laç
 ### 4.1 Decisão binária
 - `1044` Múltiplos
 - `1046` Tempo de Jogo
-- `2006` Identificando o Chá
 - `2344` Notas da Prova
 
 ### 4.2 Faixas e classificação
 - `1037` Intervalo
 - `1048` Aumento de Salário
 - `1051` Impostos
-- `2685` A Mudança
 
 ### 4.3 Escolha por valor exato
 - `1050` DDD
@@ -74,7 +66,6 @@ Se a proposta for consolidar a ideia de decisão simples e composta, os mais ade
 
 ### 6.1 Muito fáceis
 - `1044` Múltiplos
-- `2006` Identificando o Chá
 - `2160` Nome no Formulário
 - `2344` Notas da Prova
 

@@ -1,22 +1,25 @@
-// Declarar as variaveis
-let entradaSenha: string | null;
+// Declarar as variáveis
+let entSenha: string | null;
 let senha: number;
 
-entradaSenha = prompt('Digite a senha: ');
+// Entrada de dados
+entSenha = prompt('Digite a senha: ');
 
-if (entradaSenha !== null) {
-    senha = parseInt(entradaSenha);
+// Processamento dos dados
+if (entSenha !== null) {
+    senha = parseInt(entSenha);
 
-    while (senha !== 2002 && entradaSenha !== null) {
+    while (senha !== 2002 && entSenha !== null) {
+        // Saída de dados
         console.log('Senha Invalida');
-        entradaSenha = prompt('Digite a senha: ');
+        entSenha = prompt('Digite a senha: ');
 
-        if (entradaSenha !== null) {
-            senha = parseInt(entradaSenha);
+        if (entSenha !== null) {
+            senha = parseInt(entSenha);
         }
     }
 
-    if (entradaSenha !== null) {
+    if (entSenha !== null) {
         console.log('Acesso Permitido');
     }
 }

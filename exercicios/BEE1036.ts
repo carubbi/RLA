@@ -1,7 +1,7 @@
 // Declarar as variáveis
-let entradaA: string | null;
-let entradaB: string | null;
-let entradaC: string | null;
+let entA: string | null;
+let entB: string | null;
+let entC: string | null;
 let A: number;
 let B: number;
 let C: number;
@@ -11,16 +11,16 @@ let R2: number;
 let raizDelta: number;
 
 // Entrada de dados
-entradaA = prompt('Digite A: ');
-entradaB = prompt('Digite B: ');
-entradaC = prompt('Digite C: ');
+entA = prompt('Digite A: ');
+entB = prompt('Digite B: ');
+entC = prompt('Digite C: ');
 
-if (entradaA !== null && entradaB !== null && entradaC !== null) {
+if (entA !== null && entB !== null && entC !== null) {
     // Processamento dos dados
     // Converter as entradas (string) para numérico
-    A = parseFloat(entradaA);
-    B = parseFloat(entradaB);
-    C = parseFloat(entradaC);
+    A = parseFloat(entA);
+    B = parseFloat(entB);
+    C = parseFloat(entC);
 
     delta = (B * B) - (4 * A * C);
 

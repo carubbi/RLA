@@ -18,18 +18,12 @@ O objetivo não é apenas resolver o problema, mas decidir qual estrutura é mai
 ## 1. Exercícios indicados para `if`
 - `1035` Teste de Seleção 1
 - `1044` Múltiplos
-- `1074` Par ou Ímpar
-- `2140` Duas Notas
 - `2160` Nome no Formulário
-- `2176` Paridade
 
 ## 2. Exercícios indicados para `if...else`
 - `1046` Tempo de Jogo
 - `1048` Aumento de Salário
-- `2003` Domingo de Manhã
-- `2006` Identificando o Chá
 - `2344` Notas da Prova
-- `2685` A Mudança
 
 ## 3. Exercícios indicados para `if...else if...else`
 - `1037` Intervalo
@@ -43,27 +37,22 @@ O objetivo não é apenas resolver o problema, mas decidir qual estrutura é mai
 - `1038` Lanche
 - `1050` DDD
 - `1052` Mês
-- `2582` System of a Download
 
 ## 5. Exercícios por objetivo pedagógico
 
 ### 5.1 Escolher entre duas ações
 - `1046` Tempo de Jogo
-- `2003` Domingo de Manhã
-- `2006` Identificando o Chá
 - `2344` Notas da Prova
 
 ### 5.2 Classificar por faixas
 - `1037` Intervalo
 - `1048` Aumento de Salário
 - `1051` Impostos
-- `2685` A Mudança
 
 ### 5.3 Escolher por código ou valor exato
 - `1038` Lanche
 - `1050` DDD
 - `1052` Mês
-- `2582` System of a Download
 
 ## 6. Melhores exercícios para começar
 Se a proposta for treinar a escolha correta da estrutura condicional, os mais adequados são:
@@ -77,7 +66,6 @@ Se a proposta for treinar a escolha correta da estrutura condicional, os mais ad
 ## 7. Progressão sugerida de dificuldade
 
 ### 7.1 Muito fáceis
-- `2006` Identificando o Chá
 - `2160` Nome no Formulário
 - `2344` Notas da Prova
 - `1044` Múltiplos

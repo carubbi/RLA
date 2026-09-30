@@ -1,14 +1,14 @@
 // Declarar as variáveis
-let entradaDD: string;
+let entDD: string;
 let DDD: number;
 let cidade: string;
 
 // Entrada de dados
-entradaDD = prompt('Digite o DDD: ')!;
+entDD = prompt('Digite o DDD: ')!;
 
 // Processamento dos dados
 // Converter as entradas (string) para numérico
-DDD = parseInt(entradaDD);
+DDD = parseInt(entDD);
 
 // Verificar o DDD e definir a cidade
 switch (DDD) {

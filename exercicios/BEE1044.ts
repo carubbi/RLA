@@ -1,17 +1,17 @@
 // Declarar as variáveis
-let entradaA: string;
-let entradaB: string;
+let entA: string;
+let entB: string;
 let A: number;
 let B: number;
 let mensagem: string;
 
 // Entrada de dados
-entradaA = prompt('Digite A: ')!;
-entradaB = prompt('Digite B: ')!;
+entA = prompt('Digite A: ')!;
+entB = prompt('Digite B: ')!;
 
 // Processamento dos dados
-A = parseInt(entradaA);
-B = parseInt(entradaB);
+A = parseInt(entA);
+B = parseInt(entB);
 
 // Saída de dados
 if ((A % B == 0) || (B % A == 0)) {

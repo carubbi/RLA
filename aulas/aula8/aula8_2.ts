@@ -1,12 +1,14 @@
 // Aula 8 - Exemplo 2 (escopo de variaveis em funcoes)
+/** Exibe uma saudação para o nome informado. */
 function mostrarMensagem(nome: string): void {
+    // Declaração de variáveis locais
     let saudacao: string;
 
     saudacao = "Ola, " + nome;
     console.log(saudacao);
 }
 
-// Declaracao de variaveis
+// Declaração de variáveis globais
 let aluno: string | null;
 
 // Entrada

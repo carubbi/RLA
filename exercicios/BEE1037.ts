@@ -1,14 +1,14 @@
 // Declarar as variáveis
-let entradaValor: string;
+let entValor: string;
 let valor: number;
 let mensagem: string;
 
 // Entrada de dados
-entradaValor = prompt('Digite o valor: ')!;
+entValor = prompt('Digite o valor: ')!;
 
 // Processamento dos dados
 // Converter a entrada para um número de ponto flutuante
-valor = parseFloat(entradaValor);
+valor = parseFloat(entValor);
 
 // Verificar o intervalo do valor e atribuir a mensagem correspondente
 if (valor < 0 || valor > 100) {

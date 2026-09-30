@@ -1,21 +1,21 @@
 // Declarar as variáveis
-let entradaNumero: string;
-let entradaHoras: string;
-let entradaValorHora: string;
+let entNum: string;
+let entHoras: string;
+let entValorHora: string;
 let numero: number;
 let horas: number;
 let valorHora: number;
 let salario: number;
 
 // Entrada de dados
-entradaNumero = prompt('Digite o numero do funcionario: ')!;
-entradaHoras = prompt('Digite as horas trabalhadas: ')!;
-entradaValorHora = prompt('Digite o valor por hora: ')!;
+entNum = prompt('Digite o numero do funcionario: ')!;
+entHoras = prompt('Digite as horas trabalhadas: ')!;
+entValorHora = prompt('Digite o valor por hora: ')!;
 
 // Processamento dos dados
-numero = parseInt(entradaNumero);
-horas = parseInt(entradaHoras);
-valorHora = parseFloat(entradaValorHora);
+numero = parseInt(entNum);
+horas = parseInt(entHoras);
+valorHora = parseFloat(entValorHora);
 
 salario = horas * valorHora;
 

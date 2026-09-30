@@ -1,14 +1,14 @@
 // Declarar as variáveis
-let entradaX: string | null;
+let entX: string | null;
 let x: number;
 let i: number;
 
 // Entrada de dados
-entradaX = prompt('Digite X: ');
+entX = prompt('Digite X: ');
 
 // Processamento dos dados
-if (entradaX !== null) {
-x = parseInt(entradaX);
+if (entX !== null) {
+x = parseInt(entX);
 
 if (x % 2 === 0) {
     x++;

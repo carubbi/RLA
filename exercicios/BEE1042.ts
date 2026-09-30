@@ -1,46 +1,47 @@
-// Declarar as variaveis
-let entradaA: string | null;
-let entradaB: string | null;
-let entradaC: string | null;
+// Declarar as variáveis
+let entA: string | null;
+let entB: string | null;
+let entC: string | null;
 let a: number;
 let b: number;
 let c: number;
-let temporaria: number;
+let temp: number;
 
 // Entrada de dados
-entradaA = prompt('Digite A: ');
-entradaB = prompt('Digite B: ');
-entradaC = prompt('Digite C: ');
+entA = prompt('Digite A: ');
+entB = prompt('Digite B: ');
+entC = prompt('Digite C: ');
 
-if (entradaA !== null && entradaB !== null && entradaC !== null) {
-    a = parseInt(entradaA);
-    b = parseInt(entradaB);
-    c = parseInt(entradaC);
+// Processamento dos dados
+if (entA !== null && entB !== null && entC !== null) {
+    a = parseInt(entA);
+    b = parseInt(entB);
+    c = parseInt(entC);
 
     if (a > b) {
-        temporaria = a;
+        temp = a;
         a = b;
-        b = temporaria;
+        b = temp;
     }
 
     if (a > c) {
-        temporaria = a;
+        temp = a;
         a = c;
-        c = temporaria;
+        c = temp;
     }
 
     if (b > c) {
-        temporaria = b;
+        temp = b;
         b = c;
-        c = temporaria;
+        c = temp;
     }
 
-    // Saida de dados
+    // Saída de dados
     console.log(a);
     console.log(b);
     console.log(c);
     console.log('');
-    console.log(entradaA);
-    console.log(entradaB);
-    console.log(entradaC);
+    console.log(entA);
+    console.log(entB);
+    console.log(entC);
 }

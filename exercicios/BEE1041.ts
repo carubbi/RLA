@@ -1,18 +1,18 @@
 // Declarar as variáveis
-let entradaX: string;
-let entradaY: string;
+let entX: string;
+let entY: string;
 let x: number;
 let y: number;
 let mensagem: string;
 
 // Entrada de dados
-entradaX = prompt('Digite X: ')!;
-entradaY = prompt('Digite Y: ')!;
+entX = prompt('Digite X: ')!;
+entY = prompt('Digite Y: ')!;
 
 // Processamento dos dados
 // Converter as entradas (string) para numérico
-x = parseFloat(entradaX);
-y = parseFloat(entradaY);
+x = parseFloat(entX);
+y = parseFloat(entY);
 
 // Verificar a posição do ponto (x, y) e atribuir a mensagem correspondente
 if (x === 0 && y === 0) {

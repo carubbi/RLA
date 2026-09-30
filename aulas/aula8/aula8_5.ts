@@ -1,62 +1,68 @@
 // Aula 8 - Exemplo 5 (contagem, soma e multiplicacao)
+/** Conta de 1 até n. */
 function calcularContagem(n: number): number {
-    let contador: number;
+    // Declaração de variáveis locais
+    let cont: number;
     let i: number;
 
-    contador = 0;
+    cont = 0;
 
     for (i = 1; i <= n; i++) {
-        contador++;
+        cont++;
     }
 
-    return contador;
+    return cont;
 }
 
+/** Soma os inteiros de 1 até n. */
 function calcularSoma(n: number): number {
+    // Declaração de variáveis locais
     let soma: number;
     let i: number;
 
     soma = 0;
 
     for (i = 1; i <= n; i++) {
-        soma = soma + i;
+        soma += i;
     }
 
     return soma;
 }
 
+/** Multiplica os inteiros de 1 até n. */
 function calcularProduto(n: number): number {
-    let produto: number;
+    // Declaração de variáveis locais
+    let prod: number;
     let i: number;
 
-    produto = 1;
+    prod = 1;
 
     for (i = 1; i <= n; i++) {
-        produto = produto * i;
+        prod *= i;
     }
 
-    return produto;
+    return prod;
 }
 
-// Declaracao de variaveis
-let entradaN: string | null;
+// Declaração de variáveis globais
+let entN: string | null;
 let n: number;
-let contadorFinal: number;
+let contFinal: number;
 let somaFinal: number;
-let produtoFinal: number;
+let prodFinal: number;
 
 // Entrada
-entradaN = prompt("Digite o valor de n:"); // 4
+entN = prompt("Digite o valor de n:"); // 4
 
 // Processamento
-if (entradaN !== null) {
-    n = parseInt(entradaN);
-    contadorFinal = calcularContagem(n);
+if (entN !== null) {
+    n = parseInt(entN);
+    contFinal = calcularContagem(n);
     somaFinal = calcularSoma(n);
-    produtoFinal = calcularProduto(n);
+    prodFinal = calcularProduto(n);
 
     // Saida
-    console.log("Contagem: " + contadorFinal);
+    console.log("Contagem: " + contFinal);
     console.log("Soma: " + somaFinal);
-    console.log("Produto: " + produtoFinal);
+    console.log("Produto: " + prodFinal);
 }

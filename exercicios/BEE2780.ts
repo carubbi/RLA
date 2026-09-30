@@ -1,3 +1,7 @@
+// Declarar as variáveis
+let entDist: string | null;
+let distancia: number;
+
 function calcularPontuacao(distancia: number): number {
     if (distancia <= 800) {
         return 1;
@@ -8,12 +12,13 @@ function calcularPontuacao(distancia: number): number {
     }
 }
 
-let entradaDistancia: string | null;
-let distancia: number;
+// Entrada de dados
+entDist = prompt('Digite a distancia: ');
 
-entradaDistancia = prompt('Digite a distancia: ');
+// Processamento dos dados
+if (entDist !== null) {
+    distancia = parseInt(entDist);
 
-if (entradaDistancia !== null) {
-    distancia = parseInt(entradaDistancia);
+    // Saída de dados
     console.log(calcularPontuacao(distancia));
 }

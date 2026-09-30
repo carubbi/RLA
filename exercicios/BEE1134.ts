@@ -1,20 +1,22 @@
-// Declarar as variaveis
-let entradaCodigo: string | null;
+// Declarar as variáveis
+let entCodigo: string | null;
 let codigo: number;
 let alcool: number;
 let gasolina: number;
 let diesel: number;
 
+// Entrada de dados: a leitura se repete no laço.
+entCodigo = "";
+
+// Processamento dos dados
 alcool = 0;
 gasolina = 0;
 diesel = 0;
-entradaCodigo = "";
+while (entCodigo !== null) {
+    entCodigo = prompt('Digite o codigo: ');
 
-while (entradaCodigo !== null) {
-    entradaCodigo = prompt('Digite o codigo: ');
-
-    if (entradaCodigo !== null) {
-        codigo = parseInt(entradaCodigo);
+    if (entCodigo !== null) {
+        codigo = parseInt(entCodigo);
 
         if (codigo === 1) {
             alcool++;
@@ -28,7 +30,8 @@ while (entradaCodigo !== null) {
     }
 }
 
-if (entradaCodigo !== null) {
+if (entCodigo !== null) {
+    // Saída de dados
     console.log('MUITO OBRIGADO');
     console.log(`Alcool: ${alcool}`);
     console.log(`Gasolina: ${gasolina}`);

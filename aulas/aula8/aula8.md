@@ -38,11 +38,13 @@ Em TypeScript, cada parâmetro deve ter seu tipo indicado após `:`. O tipo do
 retorno é escrito depois dos parênteses.
 
 ```typescript
+/** Soma dois números. */
 function somar(a: number, b: number): number {
-    let resultado: number;
+    // Declaração de variáveis locais
+    let res: number;
 
-    resultado = a + b;
-    return resultado;
+    res = a + b;
+    return res;
 }
 ```
 
@@ -56,6 +58,7 @@ Quando uma função apenas executa uma ação e não devolve um valor, seu retor
 é `void`.
 
 ```typescript
+/** Exibe um número no console. */
 function exibirResultado(valor: number): void {
     console.log(valor);
 }
@@ -67,25 +70,26 @@ não entrega um resultado por meio de `return`.
 ## 3. Exemplo básico: soma
 
 ```typescript
+/** Soma dois números. */
 function somar(a: number, b: number): number {
     return a + b;
 }
 
-// Declaracao de variaveis
-let entradaNum1: string | null;
-let entradaNum2: string | null;
+// Declaração de variáveis globais
+let entNum1: string | null;
+let entNum2: string | null;
 let num1: number;
 let num2: number;
 let total: number;
 
 // Entrada
-entradaNum1 = prompt("Digite o primeiro numero:");
-entradaNum2 = prompt("Digite o segundo numero:");
+entNum1 = prompt("Digite o primeiro numero:");
+entNum2 = prompt("Digite o segundo numero:");
 
 // Processamento
-if (entradaNum1 !== null && entradaNum2 !== null) {
-    num1 = parseFloat(entradaNum1);
-    num2 = parseFloat(entradaNum2);
+if (entNum1 !== null && entNum2 !== null) {
+    num1 = parseFloat(entNum1);
+    num2 = parseFloat(entNum2);
     total = somar(num1, num2);
 
     // Saida
@@ -98,17 +102,22 @@ e realiza somente a tarefa indicada por seu nome.
 
 ## 4. Escopo de variáveis
 Uma variável declarada dentro de uma função possui escopo local. Ela só pode
-ser usada naquele bloco.
+ser usada naquele bloco. Nos exemplos desta aula, as variáveis declaradas fora
+das funções são chamadas de globais: pertencem ao programa principal. Uma
+função pode acessá-las, mas recebe por parâmetros os valores de que precisa
+para executar sua tarefa.
 
 ```typescript
+/** Exibe uma saudação para o nome informado. */
 function mostrarMensagem(nome: string): void {
+    // Declaração de variáveis locais
     let saudacao: string;
 
     saudacao = "Ola, " + nome;
     console.log(saudacao);
 }
 
-// Declaracao de variaveis
+// Declaração de variáveis globais
 let aluno: string | null;
 
 // Entrada
@@ -120,15 +129,16 @@ if (aluno !== null) {
 }
 ```
 
-Nesse exemplo, `saudacao` é local e `aluno` pertence ao programa principal. A
-função recebe uma cópia do valor por meio do parâmetro `nome`.
+Nesse exemplo, `saudacao` é local à função e `aluno` é global. A função recebe
+uma cópia do valor de `aluno` por meio do parâmetro `nome`.
 
 ## 5. Reutilização de código
 Uma mesma função pode ser chamada várias vezes.
 
 ```typescript
-function calcularDobro(numero: number): number {
-    return numero * 2;
+/** Calcula o dobro de um número. */
+function calcularDobro(num: number): number {
+    return num * 2;
 }
 
 console.log(calcularDobro(5));
@@ -140,6 +150,7 @@ Uma função também pode possuir mais de um `return`, desde que todos os caminh
 respeitem o tipo declarado.
 
 ```typescript
+/** Determina a situação do aluno pela média. */
 function situacaoAluno(media: number): string {
     if (media >= 7) {
         return "Aprovado";
@@ -154,60 +165,72 @@ function situacaoAluno(media: number): string {
 ```
 
 ## 6. Modularização
-Cada função deve ter um objetivo bem definido. No exemplo abaixo, uma função
-converte a entrada e outra calcula a média.
+Cada função deve ter um objetivo bem definido. No BEE1002, a função recebe o
+raio e calcula a área do círculo. O programa principal lê e converte a entrada,
+chama a função e mostra o resultado.
 
 ```typescript
-function converterNumero(texto: string): number {
-    return parseFloat(texto);
+// Declarar as variáveis globais
+let entRaio: string | null;
+let raio: number;
+let area: number;
+
+/** Calcula a área do círculo a partir do raio. */
+function calcularAreaCirculo(raio: number): number {
+    // Declarar as variáveis locais
+    let res: number;
+
+    res = 3.14159 * raio * raio;
+    return res;
 }
 
-function calcularMedia(nota1: number, nota2: number): number {
-    return (nota1 + nota2) / 2;
-}
+// Entrada de dados
+entRaio = prompt('Digite o raio: ');
 
-// Declaracao de variaveis
-let entradaNota1: string | null;
-let entradaNota2: string | null;
-let nota1: number;
-let nota2: number;
-let media: number;
+// Processamento dos dados
+if (entRaio !== null) {
+    raio = parseFloat(entRaio);
+    area = calcularAreaCirculo(raio);
 
-// Entrada
-entradaNota1 = prompt("Digite a primeira nota:");
-entradaNota2 = prompt("Digite a segunda nota:");
-
-if (entradaNota1 !== null && entradaNota2 !== null) {
-    nota1 = converterNumero(entradaNota1);
-    nota2 = converterNumero(entradaNota2);
-    media = calcularMedia(nota1, nota2);
-    console.log(media);
+    // Saída de dados
+    console.log(`A=${area.toFixed(4)}`);
 }
 ```
 
+Compare com a [solução sem função](../../exercicios/BEE1002.ts) e consulte a
+[versão com função](../../exercicios/BEE1002_funcao.ts).
+
 ## 7. Troca de valores
-A troca de dois valores precisa de uma variável temporária.
+A função abaixo troca os valores de `a` e `b`. A leitura e a saída continuam
+no programa principal.
 
 ```typescript
-// Declaracao de variaveis
-let entradaA: string | null;
-let entradaB: string | null;
+// Declaração de variáveis globais
+let entA: string | null;
+let entB: string | null;
 let a: number;
 let b: number;
-let temporaria: number;
+
+/** Troca os valores globais de a e b. */
+function trocarValores(): void {
+    // Declaração de variáveis locais
+    let temp: number;
+
+    temp = a;
+    a = b;
+    b = temp;
+}
 
 // Entrada
-entradaA = prompt("Digite o valor de a:");
-entradaB = prompt("Digite o valor de b:");
+entA = prompt("Digite o valor de a:");
+entB = prompt("Digite o valor de b:");
 
 // Processamento
-if (entradaA !== null && entradaB !== null) {
-    a = parseFloat(entradaA);
-    b = parseFloat(entradaB);
+if (entA !== null && entB !== null) {
+    a = parseFloat(entA);
+    b = parseFloat(entB);
 
-    temporaria = a;
-    a = b;
-    b = temporaria;
+    trocarValores();
 
     // Saida
     console.log(a);
@@ -215,51 +238,60 @@ if (entradaA !== null && entradaB !== null) {
 }
 ```
 
-Não criamos nesta aula uma função que devolva os dois valores, pois estruturas
-que armazenam vários elementos serão estudadas a partir da Aula 9.
+`trocarValores` altera as variáveis globais `a` e `b`; por isso, depende delas
+e não recebe parâmetros. Se recebesse dois números como parâmetros, trocaria
+apenas as cópias locais, sem alterar os valores do programa principal. Uma
+função que devolva os dois valores poderá ser estudada após a introdução de
+vetores na Aula 9.
 
 ## 8. Funções escalares para contagem, soma e produto
 Quando cada função devolve um único número, seus retornos podem permanecer
 simples e explícitos.
 
 ```typescript
+/** Conta de 1 até n. */
 function calcularContagem(n: number): number {
-    let contador: number;
+    // Declaração de variáveis locais
+    let cont: number;
     let i: number;
 
-    contador = 0;
+    cont = 0;
 
     for (i = 1; i <= n; i++) {
-        contador++;
+        cont++;
     }
 
-    return contador;
+    return cont;
 }
 
+/** Soma os inteiros de 1 até n. */
 function calcularSoma(n: number): number {
+    // Declaração de variáveis locais
     let soma: number;
     let i: number;
 
     soma = 0;
 
     for (i = 1; i <= n; i++) {
-        soma = soma + i;
+        soma += i;
     }
 
     return soma;
 }
 
+/** Multiplica os inteiros de 1 até n. */
 function calcularProduto(n: number): number {
-    let produto: number;
+    // Declaração de variáveis locais
+    let prod: number;
     let i: number;
 
-    produto = 1;
+    prod = 1;
 
     for (i = 1; i <= n; i++) {
-        produto = produto * i;
+        prod *= i;
     }
 
-    return produto;
+    return prod;
 }
 ```
 
@@ -268,29 +300,31 @@ O fatorial de um número inteiro não negativo `n` é o produto dos números de
 `1` até `n`. Por definição, o fatorial de zero é `1`.
 
 ```typescript
+/** Calcula o fatorial de n. */
 function calcularFatorial(n: number): number {
-    let fatorial: number;
+    // Declaração de variáveis locais
+    let fat: number;
     let i: number;
 
-    fatorial = 1;
+    fat = 1;
 
     for (i = 1; i <= n; i++) {
-        fatorial = fatorial * i;
+        fat *= i;
     }
 
-    return fatorial;
+    return fat;
 }
 
-// Declaracao de variaveis
-let entrada: string | null;
-let numero: number;
+// Declaração de variáveis globais
+let entNum: string | null;
+let num: number;
 
 // Entrada
-entrada = prompt("Digite um numero:");
+entNum = prompt("Digite um numero:");
 
-if (entrada !== null) {
-    numero = parseInt(entrada);
-    console.log(calcularFatorial(numero));
+if (entNum !== null) {
+    num = parseInt(entNum);
+    console.log(calcularFatorial(num));
 }
 ```
 
@@ -301,30 +335,32 @@ entrada compatível com os compiladores online adotados na disciplina.
 Na sequência de Fibonacci, cada termo é obtido pela soma dos dois anteriores.
 
 ```typescript
-function gerarFibonacci(quantidade: number): string {
+/** Gera os primeiros termos da sequência de Fibonacci. */
+function gerarFibonacci(qtd: number): string {
+    // Declaração de variáveis locais
     let a: number;
     let b: number;
-    let proximo: number;
+    let prox: number;
     let i: number;
-    let sequencia: string;
+    let seq: string;
 
     a = 0;
     b = 1;
-    sequencia = "";
+    seq = "";
 
-    for (i = 1; i <= quantidade; i++) {
-        sequencia += a;
+    for (i = 1; i <= qtd; i++) {
+        seq += a;
 
-        if (i < quantidade) {
-            sequencia += ", ";
+        if (i < qtd) {
+            seq += ", ";
         }
 
-        proximo = a + b;
+        prox = a + b;
         a = b;
-        b = proximo;
+        b = prox;
     }
 
-    return sequencia;
+    return seq;
 }
 ```
 
@@ -340,29 +376,31 @@ Para converter um inteiro decimal positivo em binário:
 4. repita até o número chegar a zero.
 
 ```typescript
-function decimalParaBinario(numero: number): string {
-    let binario: string;
+/** Converte um inteiro decimal para binário. */
+function decimalParaBinario(num: number): string {
+    // Declaração de variáveis locais
+    let bin: string;
     let resto: number;
 
-    if (numero === 0) {
+    if (num === 0) {
         return "0";
     }
 
-    binario = "";
+    bin = "";
 
-    while (numero > 0) {
-        resto = numero % 2;
-        binario = resto + binario;
-        numero = Math.trunc(numero / 2);
+    while (num > 0) {
+        resto = num % 2;
+        bin = resto + bin;
+        num = Math.trunc(num / 2);
     }
 
-    return binario;
+    return bin;
 }
 ```
 
-Teste de mesa para `numero = 13`:
+Teste de mesa para `num = 13`:
 
-| numero | resto | binario |
+| num | resto | bin |
 | --- | --- | --- |
 | 13 | 1 | 1 |
 | 6 | 0 | 01 |
@@ -374,15 +412,17 @@ Um número primo é maior ou igual a `2` e possui apenas dois divisores
 positivos: `1` e ele mesmo.
 
 ```typescript
-function ehPrimo(numero: number): boolean {
-    let divisor: number;
+/** Verifica se um número é primo. */
+function ehPrimo(num: number): boolean {
+    // Declaração de variáveis locais
+    let div: number;
 
-    if (numero < 2) {
+    if (num < 2) {
         return false;
     }
 
-    for (divisor = 2; divisor < numero; divisor++) {
-        if (numero % divisor === 0) {
+    for (div = 2; div < num; div++) {
+        if (num % div === 0) {
             return false;
         }
     }
@@ -390,29 +430,31 @@ function ehPrimo(numero: number): boolean {
     return true;
 }
 
-function gerarNPrimeirosPrimos(quantidade: number): string {
-    let encontrados: number;
-    let candidato: number;
-    let resposta: string;
+/** Gera a quantidade informada de números primos. */
+function gerarNPrimeirosPrimos(qtd: number): string {
+    // Declaração de variáveis locais
+    let cont: number;
+    let cand: number;
+    let resp: string;
 
-    encontrados = 0;
-    candidato = 2;
-    resposta = "";
+    cont = 0;
+    cand = 2;
+    resp = "";
 
-    while (encontrados < quantidade) {
-        if (ehPrimo(candidato)) {
-            if (encontrados > 0) {
-                resposta += ", ";
+    while (cont < qtd) {
+        if (ehPrimo(cand)) {
+            if (cont > 0) {
+                resp += ", ";
             }
 
-            resposta += candidato;
-            encontrados++;
+            resp += cand;
+            cont++;
         }
 
-        candidato++;
+        cand++;
     }
 
-    return resposta;
+    return resp;
 }
 ```
 
@@ -444,6 +486,7 @@ Para aproximar a progressão da linguagem Java:
 - declarar variáveis no início do bloco;
 - indicar explicitamente o tipo;
 - inicializar depois da declaração;
+- usar abreviações claras para nomes recorrentes, como `num`, `qtd`, `fat` e `prox`;
 - separar entrada, processamento e saída;
 - usar uma instrução por linha;
 - manter blocos delimitados por chaves;
@@ -451,10 +494,12 @@ Para aproximar a progressão da linguagem Java:
 - preferir lógica explícita nas primeiras aulas.
 
 ```typescript
-function calcularDobro(numero: number): number {
+/** Calcula o dobro de um número. */
+function calcularDobro(num: number): number {
+    // Declaração de variáveis locais
     let dobro: number;
 
-    dobro = numero * 2;
+    dobro = num * 2;
     return dobro;
 }
 ```

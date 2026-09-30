@@ -1,22 +1,22 @@
 // Declarar as variáveis
-let entradaA: string | null;
-let entradaB: string | null;
-let entradaC: string | null;
+let entA: string | null;
+let entB: string | null;
+let entC: string | null;
 let a: number;
 let b: number;
 let c: number;
 let temp: number;
 
 // Entrada de dados
-entradaA = prompt('Digite A: ');
-entradaB = prompt('Digite B: ');
-entradaC = prompt('Digite C: ');
+entA = prompt('Digite A: ');
+entB = prompt('Digite B: ');
+entC = prompt('Digite C: ');
 
 // Processamento dos dados
-if (entradaA !== null && entradaB !== null && entradaC !== null) {
-a = parseFloat(entradaA);
-b = parseFloat(entradaB);
-c = parseFloat(entradaC);
+if (entA !== null && entB !== null && entC !== null) {
+a = parseFloat(entA);
+b = parseFloat(entB);
+c = parseFloat(entC);
 
 if (a < b) {
     temp = a;

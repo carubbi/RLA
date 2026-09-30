@@ -1,23 +1,30 @@
 // Aula 8 - Exemplo 4 (troca de valores)
-// Declaracao de variaveis
-let entradaA: string | null;
-let entradaB: string | null;
+// Declaração de variáveis globais
+let entA: string | null;
+let entB: string | null;
 let a: number;
 let b: number;
-let temporaria: number;
+
+/** Troca os valores globais de a e b. */
+function trocarValores(): void {
+    // Declaração de variáveis locais
+    let temp: number;
+
+    temp = a;
+    a = b;
+    b = temp;
+}
 
 // Entrada
-entradaA = prompt("Digite o valor de a:"); // 10
-entradaB = prompt("Digite o valor de b:"); // 25
+entA = prompt("Digite o valor de a:"); // 10
+entB = prompt("Digite o valor de b:"); // 25
 
 // Processamento
-if (entradaA !== null && entradaB !== null) {
-    a = parseFloat(entradaA);
-    b = parseFloat(entradaB);
+if (entA !== null && entB !== null) {
+    a = parseFloat(entA);
+    b = parseFloat(entB);
 
-    temporaria = a;
-    a = b;
-    b = temporaria;
+    trocarValores();
 
     // Saida
     console.log(a); // 25

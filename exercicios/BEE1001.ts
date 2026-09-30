@@ -1,18 +1,18 @@
 // Declarar as variáveis
-let entradaA: string;
-let entradaB: string;
+let entA: string;
+let entB: string;
 let A: number;
 let B: number;
 let X: number;
 
 // Entrada de dados
-entradaA = prompt('Digite o valor de A:')!;
-entradaB = prompt('Digite o valor de B:')!;
+entA = prompt('Digite o valor de A:')!;
+entB = prompt('Digite o valor de B:')!;
 
 // Processamento dos dados
 // Converter as entradas (string) para numérico
-A = parseInt(entradaA, 10);
-B = parseInt(entradaB, 10);
+A = parseInt(entA, 10);
+B = parseInt(entB, 10);
 
 // Calcular a soma
 X = A + B;

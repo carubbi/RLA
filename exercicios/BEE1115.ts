@@ -1,25 +1,28 @@
-// Declarar as variaveis
-let entradaX: string | null;
-let entradaY: string | null;
+// Declarar as variáveis
+let entX: string | null;
+let entY: string | null;
 let x: number;
 let y: number;
 
-entradaX = "";
-entradaY = "";
+// Entrada de dados: a leitura se repete no laço.
+entX = "";
+entY = "";
 
-while (entradaX !== null && entradaY !== null) {
-    entradaX = prompt('Digite X: ');
-    entradaY = prompt('Digite Y: ');
+// Processamento dos dados
+while (entX !== null && entY !== null) {
+    entX = prompt('Digite X: ');
+    entY = prompt('Digite Y: ');
 
-    if (entradaX !== null && entradaY !== null) {
-        x = parseInt(entradaX);
-        y = parseInt(entradaY);
+    if (entX !== null && entY !== null) {
+        x = parseInt(entX);
+        y = parseInt(entY);
 
         if (x === 0 || y === 0) {
             break;
         }
 
         if (x > 0 && y > 0) {
+            // Saída de dados
             console.log('primeiro');
         } else if (x < 0 && y > 0) {
             console.log('segundo');

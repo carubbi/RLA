@@ -1,4 +1,13 @@
+// Declarar as variáveis
+let entT: string | null;
+let entX: string | null;
+let t: number;
+let caso: number;
+let x: number;
+let mensagem: string;
+
 function ehPrimo(numero: number): boolean {
+    // Declarar as variáveis
     let divisor: number;
 
     if (numero < 2) {
@@ -14,31 +23,27 @@ function ehPrimo(numero: number): boolean {
     return true;
 }
 
-let entradaT: string | null;
-let entradaX: string | null;
-let t: number;
-let caso: number;
-let x: number;
-let mensagem: string;
+// Entrada de dados
+entT = prompt('Digite a quantidade de casos: ');
 
-entradaT = prompt('Digite a quantidade de casos: ');
+// Processamento dos dados
+if (entT !== null) {
+    t = parseInt(entT);
+    entX = "";
 
-if (entradaT !== null) {
-    t = parseInt(entradaT);
-    entradaX = "";
+    for (caso = 1; caso <= t && entX !== null; caso++) {
+        entX = prompt('Digite o numero: ');
 
-    for (caso = 1; caso <= t && entradaX !== null; caso++) {
-        entradaX = prompt('Digite o numero: ');
-
-        if (entradaX !== null) {
-            x = parseInt(entradaX);
+        if (entX !== null) {
+            x = parseInt(entX);
 
             if (ehPrimo(x)) {
-                mensagem = `${entradaX} eh primo`;
+                mensagem = `${entX} eh primo`;
             } else {
-                mensagem = `${entradaX} nao eh primo`;
+                mensagem = `${entX} nao eh primo`;
             }
 
+            // Saída de dados
             console.log(mensagem);
         }
     }

@@ -1,17 +1,17 @@
 // Declarar as variáveis
-let entradaA: string;
-let entradaB: string;
+let entA: string;
+let entB: string;
 let A: number;
 let B: number;
 let MEDIA: number;
 
 // Entrada de dados
-entradaA = prompt('Digite A: ')!;
-entradaB = prompt('Digite B: ')!;
+entA = prompt('Digite A: ')!;
+entB = prompt('Digite B: ')!;
 
 // Processamento dos dados
-A = parseFloat(entradaA);
-B = parseFloat(entradaB);
+A = parseFloat(entA);
+B = parseFloat(entB);
 MEDIA = ((A * 3.5) + (B * 7.5)) / 11;
 
 // Saída de dados

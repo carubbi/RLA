@@ -1,15 +1,15 @@
 // Declarar as variáveis
-let entradaSalario: string;
+let entSalario: string;
 let salario: number;
 let percentual: number;
 let reajuste: number;
 let novoSalario: number;
 
 // Entrada de dados
-entradaSalario = prompt('Digite o salario: ')!;
+entSalario = prompt('Digite o salario: ')!;
 
 // Processamento dos dados
-salario = parseFloat(entradaSalario);
+salario = parseFloat(entSalario);
 
 if (salario <= 400.00) {
     percentual = 15;
