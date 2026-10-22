@@ -6,7 +6,7 @@ function lerNum(m: string): number {
         e = prompt(m);
 
         if (e !== null) {
-            return parseFloat(e);
+            return parseInt(e);
         }
     }
 }
