@@ -1,3 +1,4 @@
+// Versão do código com função auxiliar para leitura de números
 // Função para ler um número
 function lerNum(m: string): number {
     let e: string | null; // Entrada do usuário
@@ -36,3 +37,4 @@ for (i = 1; i <= N; i = i + 1) {
 
 // Saída do resultado
 console.log(T);
+

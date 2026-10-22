@@ -51,3 +51,5 @@ Leia a quantidade de bandejas `N` e inicialize o total de copos quebrados `T` co
 Em cada repetição, leia as quantidades de latas `L` e de copos `C`. Se `L > C`, há mais latas que copos: a bandeja cai e todos os seus `C` copos quebram. Por isso, some `C` ao acumulador `T`. Se `L <= C`, a quantidade de latas é menor ou igual à de copos: o garçom entrega a bandeja sem deixá-la cair e nenhum copo dessa bandeja quebra. Por isso, `T` permanece igual. Em ambos os casos, incremente `i` para avançar para a próxima bandeja.
 
 Depois de processar as `N` bandejas, exiba `T`. Basta manter as quantidades da bandeja atual e o total acumulado, sem armazenar os dados das bandejas anteriores.
+
+![Ilustração do segundo exemplo: quatro bandejas, comparação entre latas e copos e evolução do acumulador, totalizando 6 + 0 + 1 + 0 = 7 copos quebrados.](figs/JRF12010_garcon_logica.png)

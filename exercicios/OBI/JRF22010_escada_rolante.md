@@ -63,3 +63,5 @@ Se `D < 10`, a pessoa atual chega enquanto a escada ainda está ligada. Os perí
 Se `D >= 10`, os períodos de funcionamento das duas pessoas não se sobrepõem. A pessoa atual acrescenta um período completo de 10 segundos; por isso, some 10 a `S`. Quando `D > 10`, a escada ficou desligada entre as duas utilizações, e esse intervalo não deve ser somado. Quando `D = 10`, a pessoa chega exatamente no instante previsto para o desligamento e acrescenta mais 10 segundos, sem intervalo de inatividade.
 
 Em ambos os casos, atualize `A` com `T`, pois a pessoa atual será a anterior na próxima comparação, e incremente `i` para avançar para a próxima pessoa. Ao terminar, exiba `S`, o total de segundos em que a escada ficou ligada. Basta guardar o instante anterior e o total acumulado, sem armazenar todos os instantes. Se houver apenas uma pessoa, o laço não será executado e o resultado será 10 segundos.
+
+![Ilustração do segundo exemplo: escada rolante, passagens das cinco pessoas e períodos de funcionamento, totalizando 10 + 5 + 7 + 3 + 10 = 35 segundos.](figs/JRF22010_escada_rolante_logica.png)
