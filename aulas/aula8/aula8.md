@@ -197,8 +197,8 @@ if (entRaio !== null) {
 }
 ```
 
-Compare com a [solução sem função](../../exercicios/BEE1002.ts) e consulte a
-[versão com função](../../exercicios/BEE1002_funcao.ts).
+Compare com a [solução sem função](../../exercicios/BEE/BEE1002.ts) e consulte a
+[versão com função](../../exercicios/BEE/BEE1002_funcao.ts).
 
 ## 7. Troca de valores
 A função abaixo troca os valores de `a` e `b`. A leitura e a saída continuam

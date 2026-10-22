@@ -32,9 +32,9 @@ Compare cada solução sequencial com a nova versão que usa uma função. Em to
 
 | Ordem | Exercício | Solução original | Nova solução | Função |
 | --- | --- | --- | --- | --- |
-| 1 | `1002` Área do Círculo | [BEE1002.ts](../../exercicios/BEE1002.ts) | [BEE1002_funcao.ts](../../exercicios/BEE1002_funcao.ts) | `calcularAreaCirculo(raio: number): number` |
-| 2 | `1014` Consumo | [BEE1014.ts](../../exercicios/BEE1014.ts) | [BEE1014_funcao.ts](../../exercicios/BEE1014_funcao.ts) | `calcularConsumo(dist: number, litros: number): number` |
-| 3 | `1079` Médias Ponderadas | [BEE1079.ts](../../exercicios/BEE1079.ts) | [BEE1079_funcao.ts](../../exercicios/BEE1079_funcao.ts) | `calcularMediaPonderada(a: number, b: number, c: number): number` |
+| 1 | `1002` Área do Círculo | [BEE1002.ts](../../exercicios/BEE/BEE1002.ts) | [BEE1002_funcao.ts](../../exercicios/BEE/BEE1002_funcao.ts) | `calcularAreaCirculo(raio: number): number` |
+| 2 | `1014` Consumo | [BEE1014.ts](../../exercicios/BEE/BEE1014.ts) | [BEE1014_funcao.ts](../../exercicios/BEE/BEE1014_funcao.ts) | `calcularConsumo(dist: number, litros: number): number` |
+| 3 | `1079` Médias Ponderadas | [BEE1079.ts](../../exercicios/BEE/BEE1079.ts) | [BEE1079_funcao.ts](../../exercicios/BEE/BEE1079_funcao.ts) | `calcularMediaPonderada(a: number, b: number, c: number): number` |
 
 No `1079`, a chamada da função se repete para cada caso de teste. Isso permite retomar parâmetros e retorno antes de discutir reutilização dentro de um laço.
 
@@ -44,8 +44,8 @@ Depois da sequência inicial, retome exercícios em que uma função devolve `bo
 
 | Ordem | Exercício | Solução original | Nova solução | Funções |
 | --- | --- | --- | --- | --- |
-| 4 | `1117` Validação de Nota | [BEE1117.ts](../../exercicios/BEE1117.ts) | [BEE1117_funcao.ts](../../exercicios/BEE1117_funcao.ts) | `notaValida` e `calcularMedia` |
-| 5 | `1043` Triângulo | [BEE1043.ts](../../exercicios/BEE1043.ts) | [BEE1043_funcao.ts](../../exercicios/BEE1043_funcao.ts) | `formaTriangulo`, `calcularPerimetro` e `calcularAreaTrapezio` |
+| 4 | `1117` Validação de Nota | [BEE1117.ts](../../exercicios/BEE/BEE1117.ts) | [BEE1117_funcao.ts](../../exercicios/BEE/BEE1117_funcao.ts) | `notaValida` e `calcularMedia` |
+| 5 | `1043` Triângulo | [BEE1043.ts](../../exercicios/BEE/BEE1043.ts) | [BEE1043_funcao.ts](../../exercicios/BEE/BEE1043_funcao.ts) | `formaTriangulo`, `calcularPerimetro` e `calcularAreaTrapezio` |
 
 ## 1. Exercícios mais diretamente ligados aos temas da aula
 
