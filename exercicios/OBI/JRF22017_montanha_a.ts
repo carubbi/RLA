@@ -9,7 +9,7 @@ let A: number; // Altura à esquerda
 let B: number; // Altura do meio
 let C: number; // Altura à direita
 let i: number; // Posição da altura à direita
-let maisPicos: boolean; // Indica se foi encontrado um vale
+let P: boolean; // Indica se foi encontrado um vale
 
 // Entrada de dados
 entN = prompt('Digite a quantidade de alturas:');
@@ -23,7 +23,7 @@ if (entN !== null) {
     if (entA !== null && entB !== null) {
         A = parseInt(entA);
         B = parseInt(entB);
-        maisPicos = false;
+        P = false;
 
         for (i = 3; i <= N; i++) {
             entC = prompt('Digite a próxima altura:');
@@ -32,7 +32,7 @@ if (entN !== null) {
                 C = parseInt(entC);
 
                 if (A > B && B < C) {
-                    maisPicos = true;
+                    P = true;
                 }
 
                 A = B;
@@ -41,7 +41,7 @@ if (entN !== null) {
         }
 
         // Saída de dados
-        if (maisPicos) {
+        if (P) {
             console.log('S');
         } else {
             console.log('N');

@@ -37,15 +37,15 @@ Nas soluções para o TypeScript Playground, informe um número por `prompt`.
 ```mermaid
 flowchart TD
 IN([INICIO]) --> EN[/"N; A; B"/]
-EN --> INIT["maisPicos = falso; i = 3"]
+EN --> INIT["P = falso; i = 3"]
 INIT --> LOOP{"i <= N?"}
 LOOP -- V --> READ[/"C"/]
 READ --> TEST{"A > B e B < C?"}
-TEST -- V --> FLAG["maisPicos = verdadeiro"]
+TEST -- V --> FLAG["P = verdadeiro"]
 TEST -- F --> NEXT["A = B; B = C; i = i + 1"]
 FLAG --> NEXT
 NEXT --> LOOP
-LOOP -- F --> RESULT{"maisPicos?"}
+LOOP -- F --> RESULT{"P?"}
 RESULT -- V --> YES[/"S"/]
 RESULT -- F --> NO[/"N"/]
 YES --> END([FIM])
@@ -54,7 +54,7 @@ NO --> END
 
 ## Ideia do algoritmo
 
-Leia as duas primeiras alturas em `A` e `B`; inicialize `maisPicos = false`. A partir da terceira, leia `C`. Se `A > B` e `B < C`, encontramos um vale: atribua `true` a `maisPicos`.
+Leia as duas primeiras alturas em `A` e `B`; inicialize `P = false`. A partir da terceira, leia `C`. Se `A > B` e `B < C`, encontramos um vale: atribua `true` a `P`.
 
 Desloque a comparação com `A = B` e depois `B = C`. A ordem importa: preserva as duas últimas alturas para a próxima leitura. Uma vez verdadeiro, o indicador permanece verdadeiro, mesmo que os próximos trios não formem vales.
 

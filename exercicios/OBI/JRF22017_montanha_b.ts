@@ -29,7 +29,7 @@ let A: number; // Altura à esquerda
 let B: number; // Altura do meio
 let C: number; // Altura à direita
 let i: number; // Posição da altura à direita
-let maisPicos: boolean; // Indica se foi encontrado um vale
+let P: boolean; // Indica se foi encontrado um vale
 
 // Entrada de dados
 N = lerNum('Digite a quantidade de alturas:');
@@ -37,13 +37,13 @@ A = lerNum('Digite a primeira altura:');
 B = lerNum('Digite a segunda altura:');
 
 // Processamento dos dados
-maisPicos = false;
+P = false;
 
 for (i = 3; i <= N; i++) {
     C = lerNum('Digite a próxima altura:');
 
     if (A > B && B < C) {
-        maisPicos = true;
+        P = true;
     }
 
     A = B;
@@ -51,7 +51,7 @@ for (i = 3; i <= N; i++) {
 }
 
 // Saída de dados
-if (maisPicos) {
+if (P) {
     console.log('S');
 } else {
     console.log('N');
