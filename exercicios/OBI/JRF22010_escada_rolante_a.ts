@@ -2,12 +2,12 @@
 // Declarar as variáveis
 let entN: string | null;
 let entT: string | null;
-let N: number; // Quantidade de pessoas
-let T: number; // Instante de passagem da pessoa atual
-let i: number; // Pessoa atual
-let A: number = 0; // Instante de passagem da pessoa anterior
-let D: number; // Diferença entre os instantes
-let S: number; // Tempo total de funcionamento
+let N: number; // quantidade de pessoas
+let T: number; // instante de passagem da pessoa atual
+let p: number; // pessoa atual
+let A: number; // instante de passagem da pessoa anterior
+let D: number; // diferença entre os instantes
+let S: number; // tempo total de funcionamento
 
 // Entrada de dados
 entN = prompt('Digite a quantidade de pessoas:');
@@ -15,15 +15,17 @@ entN = prompt('Digite a quantidade de pessoas:');
 // Processamento dos dados
 if (entN !== null) {
     N = parseInt(entN);
+    
+    A = 0;
     S = 10;
 
-    for (i = 1; i <= N; i++) {
+    for (p = 1; p <= N; p++) {
         entT = prompt('Digite o instante de passagem:');
 
         if (entT !== null) {
             T = parseInt(entT);
 
-            if (i > 1) {
+            if (p > 1) {
                 D = T - A;
 
                 if (D < 10) {
