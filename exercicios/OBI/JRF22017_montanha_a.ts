@@ -33,6 +33,7 @@ if (entN !== null) {
 
                 if (A > B && B < C) {
                     P = true;
+                    break;
                 }
 
                 A = B;
