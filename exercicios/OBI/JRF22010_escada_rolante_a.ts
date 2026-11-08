@@ -1,18 +1,17 @@
-// Versão alternativa com prompts diretos, sem função auxiliar
-// Declarar as variáveis
+// DECLARACAO
 let entN: string | null;
 let entT: string | null;
-let N: number; // quantidade de pessoas
-let T: number; // instante de passagem da pessoa atual
-let p: number; // pessoa atual
-let A: number; // instante de passagem da pessoa anterior
-let D: number; // diferença entre os instantes
-let S: number; // tempo total de funcionamento
+let N: number;
+let T: number;
+let p: number;
+let A: number;
+let D: number;
+let S: number;
 
-// Entrada de dados
+// ENTRADA
 entN = prompt('Digite a quantidade de pessoas:');
 
-// Processamento dos dados
+// PROCESSAMENTO
 if (entN !== null) {
     N = parseInt(entN);
     
@@ -39,6 +38,6 @@ if (entN !== null) {
         }
     }
 
-    // Saída de dados
+    // SAÍDA
     console.log(S);
 }

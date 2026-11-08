@@ -28,7 +28,7 @@ let N: number; // Quantidade de alturas
 let A: number; // Altura à esquerda
 let B: number; // Altura do meio
 let C: number; // Altura à direita
-let i: number; // Posição da altura à direita
+let h: number; // Posição da altura à direita
 let P: boolean; // Indica se foi encontrado um vale
 
 // Entrada de dados
@@ -39,7 +39,7 @@ B = lerNum('Digite a segunda altura:');
 // Processamento dos dados
 P = false;
 
-for (i = 3; i <= N; i++) {
+for (h = 3; h <= N; h++) {
     C = lerNum('Digite a próxima altura:');
 
     if (A > B && B < C) {
