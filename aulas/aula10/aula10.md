@@ -13,27 +13,42 @@ Nesta aula, os algoritmos serão escritos manualmente. Métodos prontos de busca
 inversão ou ordenação não substituirão os laços estudados.
 
 ## 1. Padrão de entrada
-Os exemplos recebem valores separados por espaço, dividem o texto e convertem
-cada parte.
+`lerVetor` recebe a mensagem do `prompt` como parâmetro e converte a entrada em
+um vetor de inteiros. Se o usuário cancelar, a função retorna `null`.
 
 ```typescript
-// Declaracao de variaveis
-let entrada: string | null;
-let dados: string[];
-let vetor: number[];
-let i: number;
+function lerVetor(mensagem: string): number[] | null {
+    // Declaracao de variaveis
+    let entrada: string | null;
+    let dados: string[];
+    let vetor: number[];
+    let i: number;
 
-// Entrada
-entrada = prompt("Digite os valores separados por espaco:");
+    // Entrada
+    entrada = prompt(mensagem);
 
-// Processamento
-if (entrada !== null) {
+    if (entrada === null) {
+        return null;
+    }
+
+    // Processamento
     dados = entrada.split(" ");
     vetor = [];
 
     for (i = 0; i < dados.length; i++) {
         vetor[i] = parseInt(dados[i]);
     }
+
+    return vetor;
+}
+
+// Exemplo de uso
+let valores: number[] | null;
+
+valores = lerVetor("Digite números inteiros separados por um único espaço.");
+
+if (valores !== null) {
+    console.log(valores);
 }
 ```
 
